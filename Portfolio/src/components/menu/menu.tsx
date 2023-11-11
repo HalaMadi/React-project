@@ -1,32 +1,36 @@
-import React from "react";
-import AppBar from "@mui/material/AppBar";
+import React, { SyntheticEvent, useState } from "react";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import { StyledButton, StyledAppBar } from "./style";
-
+import {
+  StyledTabs,
+  StyledTab,
+  StyledLink,
+  CenteredContainer,
+  StyledAppBar,
+} from "./style";
+import { Box } from "@mui/material";
+import Logo from "../../public/Logo.svg";
 const menu: React.FC = () => {
+  const [value, setValue] = useState(0);
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
-    <StyledAppBar>
-      <AppBar className="menu">
+    <CenteredContainer>
+      <StyledAppBar position="static">
+        <Box component="img" sx={{ bgcolor: "#000" }} alt="Logo" src={Logo} />
         <Toolbar>
-          <StyledButton>
-            <Button color="inherit" component={Link} to="/home">
-              Home
-            </Button>
-          </StyledButton>
-          <Button color="inherit" component={Link} to="/projects">
-            Projects
-          </Button>
-          <Button color="inherit" component={Link} to="/about">
-            About
-          </Button>
-          <Button color="inherit" component={Link} to="/contact">
-            Contact
-          </Button>
+          <StyledTabs value={value} onChange={handleChange} centered>
+            <StyledTab label={<StyledLink to="/">Home</StyledLink>} />
+            <StyledTab
+              label={<StyledLink to="/projects">Projects</StyledLink>}
+            />
+            <StyledTab label={<StyledLink to="/about">About</StyledLink>} />
+            <StyledTab label={<StyledLink to="/contact">Contact</StyledLink>} />
+          </StyledTabs>
         </Toolbar>
-      </AppBar>
-    </StyledAppBar>
+      </StyledAppBar>
+    </CenteredContainer>
   );
 };
 
