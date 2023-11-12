@@ -1,8 +1,16 @@
 import React from "react";
 import Header from "../../components/header";
 import Projects from "../../components/projects";
-import { StyledContainer, StyledSubTitle } from "./style";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import {
+  BoxDesign,
+  StyledContainer,
+  StyledTitle,
+  StyledTypography,
+  TestimonialsBox,
+} from "./style";
+import { Container, Grid, Typography } from "@mui/material";
+import Expertise from "../../components/expertise";
+import Footer from "../../components/footer";
 
 const home: React.FC = () => {
   return (
@@ -13,58 +21,42 @@ const home: React.FC = () => {
           <Projects />
         </StyledContainer>
         <Typography variant="h3">Expertise</Typography>
-        <Grid container justifyContent="space-between">
-          <Grid item xs={6} md={6}>
-            <Box sx={{ width: "350px" }}>
-              <StyledSubTitle variant="h5">Branding</StyledSubTitle>
-              <Typography>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                non fugit facilis incidunt a quas nihil facere? Consequatur,
-                autem aperiam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloribus harum quod repellendus veritatis ab
-                voluptas!
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={6} md={6}>
-            <Box sx={{ width: "350px" }}>
-              <StyledSubTitle variant="h5">Branding</StyledSubTitle>
-              <Typography>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                non fugit facilis incidunt a quas nihil facere? Consequatur,
-                autem aperiam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloribus harum quod repellendus veritatis ab
-                voluptas!
-              </Typography>
-            </Box>
-          </Grid>{" "}
-          <Grid item xs={6} md={6}>
-            <Box sx={{ width: "350px" }}>
-              <StyledSubTitle variant="h5">Branding</StyledSubTitle>
-              <Typography>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                non fugit facilis incidunt a quas nihil facere? Consequatur,
-                autem aperiam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloribus harum quod repellendus veritatis ab
-                voluptas! Lorem ipsum dolor sit.
-              </Typography>
-            </Box>
-          </Grid>{" "}
-          <Grid item xs={6} md={6}>
-            <Box sx={{ width: "350px" }}>
-              <StyledSubTitle variant="h5">Branding</StyledSubTitle>
-              <Typography>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                non fugit facilis incidunt a quas nihil facere? Consequatur,
-                autem aperiam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloribus harum quod repellendus veritatis ab
-                voluptas! Lorem ipsum dolor sit amet.
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
+        <Expertise />
       </Container>
-      <Box sx={{ bgcolor: "#000", color:'#fff',fontSize:'120px',mt:'70px' }}>design for digital exper</Box>
+      <BoxDesign sx={{ fontSize: "130px" }}>design for digital exper</BoxDesign>
+      <Container>
+        <TestimonialsBox>
+          <StyledTitle variant="h5">Testimonials</StyledTitle>
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <Typography>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit fugiat quo ducimus, dicta nulla nobis labore beatae at!
+                In velit ullam ipsa quae veritatis voluptatibus! Cum excepturi
+                ipsa commodi, aspernatur voluptas quam, sequi ducimus suscipit
+                quos libero repellat dolorum exercitationem nulla, distinctio
+                enim cupiditate sed culpa deserunt? Quod, odio accusamus, sequi
+                esse incidunt cumque natus voluptate aliquid molestias, officia
+                corporis.
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              container
+              justifyContent="flex-end"
+              alignItems="flex-end"
+            >
+              <div>
+                <StyledTypography>Chirs Ellingoton</StyledTypography>
+                <Typography>Product Lead.Gatha</Typography>
+              </div>
+            </Grid>
+          </Grid>
+        </TestimonialsBox>
+      </Container>
+      <Footer/>
     </>
   );
 };

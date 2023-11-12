@@ -19,26 +19,3 @@ export const StyledBox = styled(Box)`
     margin: 20px 0px;
   }
 `;
-export const BoxDesign = styled(Box)`
-  && {
-    background: #000;
-    color: #fff;
-    margin-top: 50px;
-  }
-`;
-export const TestimonialsBox = styled(Box)`
-  && {
-    margin: 50px 0px;
-  }
-`;
-export const StyledTitle = styled(Typography)`
-  && {
-    font-weight: 600;
-    margin: 25px 0px;
-  }
-`;
-export const StyledTypography = styled(Typography)`
-  && {
-    font-weight: 800;
-  }
-`;

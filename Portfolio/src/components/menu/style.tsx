@@ -47,8 +47,15 @@ export const StyledLink = styled(Link)`
   && {
     text-decoration: none;
     color: #fff;
+    font-size: 15px;
+    &.Mui-selected,
+    &.MuiTabs-indicator {
+      background-color: #131111;
+      color: #000; 
+    }
   }
 `;
+
 export const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
