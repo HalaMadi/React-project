@@ -4,31 +4,30 @@ import Projects from "../../components/projects";
 import {
   BoxDesign,
   StyledContainer,
+  StyledHomeContainer,
   StyledTitle,
   StyledTypography,
   TestimonialsBox,
 } from "./style";
 import { Container, Grid, Typography } from "@mui/material";
 import Expertise from "../../components/expertise";
-import Footer from "../../components/footer";
-
 const home: React.FC = () => {
   return (
     <>
-      <Container>
+      <StyledHomeContainer maxWidth="xl">
         <Header />
         <StyledContainer>
           <Projects />
         </StyledContainer>
         <Typography variant="h3">Expertise</Typography>
         <Expertise />
-      </Container>
-      <BoxDesign sx={{ fontSize: "130px" }}>design for digital exper</BoxDesign>
+      </StyledHomeContainer>
+      <BoxDesign>design for digital exper</BoxDesign>
       <Container>
         <TestimonialsBox>
           <StyledTitle variant="h5">Testimonials</StyledTitle>
           <Grid container>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={8} md={6}>
               <Typography>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit fugiat quo ducimus, dicta nulla nobis labore beatae at!
@@ -42,7 +41,7 @@ const home: React.FC = () => {
             </Grid>
             <Grid
               item
-              xs={12}
+              xs={4}
               md={6}
               container
               justifyContent="flex-end"
@@ -56,7 +55,6 @@ const home: React.FC = () => {
           </Grid>
         </TestimonialsBox>
       </Container>
-      <Footer/>
     </>
   );
 };

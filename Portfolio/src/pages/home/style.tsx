@@ -7,7 +7,13 @@ export const StyledContainer = styled(Container)`
     margin: 100px 0px;
   }
 `;
-
+export const StyledHomeContainer = styled(Container)`
+  && {
+    @media (max-width: 375px) {
+      width: 100%;
+    }
+  }
+`;
 export const StyledSubTitle = styled(Typography)`
   && {
     margin: 30px 0px;
@@ -24,6 +30,10 @@ export const BoxDesign = styled(Box)`
     background: #000;
     color: #fff;
     margin-top: 50px;
+    font-size: 110px;
+    @media (max-width: 768px) {
+      font-size: 80px;
+    }
   }
 `;
 export const TestimonialsBox = styled(Box)`

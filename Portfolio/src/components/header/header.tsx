@@ -10,9 +10,9 @@ import ScrollDownButton from "../scrollDown/ScrollDownButton.tsx";
 
 const Header: React.FC = () => {
   return (
-    <Container>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs={12} md={6}>
+    <>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
           <StyledTitle variant="h1" component="h2">
             Websites&
             <LineBreak /> Branding
@@ -21,7 +21,9 @@ const Header: React.FC = () => {
         <Grid
           item
           xs={12}
+          sm={6}
           md={6}
+          lg={6}
           container
           justifyContent="flex-end"
           alignItems="flex-end"
@@ -30,18 +32,18 @@ const Header: React.FC = () => {
         </Grid>
       </Grid>
       <Grid container spacing={2} sx={{ mt: "8px" }}>
-        <Grid item xs={6} md={6}>
+        <Grid item xs={4} sm={6} md={6} lg={6}>
           <StyledTypography>Let's Talk</StyledTypography>
           <Typography>hello@joey.co</Typography>
         </Grid>
-        <Grid item xs={6} md={6}>
+        <Grid item xs={8} sm={6} md={6} lg={6}>
           <StyledBrief_T>
             Hello, I'm Joey, an online product designer focusing on brand
             identity, advertising, and no code instruments.
           </StyledBrief_T>
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
 };
 

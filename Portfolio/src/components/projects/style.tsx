@@ -16,15 +16,13 @@ export const StyledButton = styled(Button)`
 `;
 export const StyledTypography = styled(Typography)`
   && {
-    font-weight: 400;
     font-weight: 800;
     padding-top: 20px;
   }
 `;
 export const StyledImg = styled(Box)`
   && {
-    margin-top: 40px;
-    width: 500px;
+    margin-top: 20px;
     border-radius: 30px;
   }
 `;

@@ -19,9 +19,9 @@ const menu: React.FC = () => {
     <CenteredContainer>
     
       <StyledAppBar position="static">
-        <IconButton sx={{ display: { xs: "block", sm: "none" } }}>
+        {/* <IconButton sx={{ display: { xs: "block", sm: "none" } }}>
           <MenuIcon />
-        </IconButton>
+        </IconButton> */}
 
         <Toolbar>
           <StyledTabs value={value} onChange={handleChange} centered>

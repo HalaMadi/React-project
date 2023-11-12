@@ -7,7 +7,7 @@ export const CenteredBox = styled(Box)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 `;
 
@@ -16,6 +16,9 @@ export const StyledFooter__Title = styled(Typography)`
     align-items: center;
     font-weight: 800;
     font-size: 150px;
+    @media (max-width: 768px) {
+      font-size: 100px;
+    }
   }
 `;
 export const StyledFooter__Button = styled(Typography)`
@@ -24,7 +27,7 @@ export const StyledFooter__Button = styled(Typography)`
     color: #fff;
     border-radius: 50px;
     padding: 20px 40px;
-    margin: 10px;
+    margin: 20px;
   }
 `;
 export const StyledLink = styled(Link)`
