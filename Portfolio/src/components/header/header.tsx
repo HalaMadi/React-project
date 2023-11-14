@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={6} lg={6}>
-          <StyledTitle variant="h1" component="h2">
+          <StyledTitle  variant="h1" component="h2">
             Websites&
             <LineBreak /> Branding
           </StyledTitle>
