@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../components/header";
-import Projects from "../../components/projects";
+import Header from "./components/header";
+import Projects from "./components/projects";
 import {
   BoxDesign,
   StyledContainer,
@@ -10,7 +10,7 @@ import {
   TestimonialsBox,
 } from "./style";
 import { Container, Grid, Typography } from "@mui/material";
-import Expertise from "../../components/expertise";
+import Expertise from "./components/expertise";
 const home: React.FC = () => {
   return (
     <>

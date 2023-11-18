@@ -1,13 +1,13 @@
 import { Container, Typography } from "@mui/material";
 import styled from "styled-components";
 
-export const StyledContainer=styled(Container)`
-  &&{
-  @media (max-width: 375px) {
-    width:375px
+export const StyledContainer = styled(Container)`
+  && {
+    @media (max-width: 375px) {
+      width: 375px;
+    }
   }
-  }
-  `;
+`;
 
 export const StyledTitle = styled(Typography)`
   && {
@@ -26,6 +26,7 @@ export const StyledTitle = styled(Typography)`
 `;
 
 export const LineBreak = styled.br`
+
 `;
 export const StyledTypography = styled(Typography)`
   && {
@@ -41,13 +42,12 @@ export const StyledTypography = styled(Typography)`
   }
 `;
 
-
 export const StyledBrief_T = styled(Typography)`
   && {
     font-size: 17px;
 
     @media (max-width: 768px) {
-      font-size: 14px; 
+      font-size: 14px;
     }
   }
 `;

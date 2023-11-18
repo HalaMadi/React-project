@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "./components/header/header";
 
-function about() {
+const about: React.FC = () => {
   return (
-    <div>about</div>
-  )
-}
+    <>
+    <Header/>
+    </>
+  );
+};
 
-export default about
+export default about;
