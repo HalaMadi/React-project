@@ -30,7 +30,7 @@ export const LineBreak = styled.br`
 `;
 export const StyledTypography = styled(Typography)`
   && {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 
     @media (max-width: 768px) {
