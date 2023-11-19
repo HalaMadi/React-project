@@ -1,9 +1,17 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { StyledButton, StyledImg } from "./style";
+import { StyledButton, StyledImg, StyledTypography } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const Projects: React.FC = () => {
+  const navigate = useNavigate();
+  
+    
+  const handleMoreButtonClick = () => {
+    // Navigate to the '/projects' route when the More button is clicked
+    navigate("/projects");
+  };
   return (
     <>
       <Typography variant="h3">Projects</Typography>
@@ -16,53 +24,29 @@ const Projects: React.FC = () => {
         justifyContent="flex-end"
         alignItems="flex-end"
       >
-        <StyledButton>
+        <StyledButton onClick={handleMoreButtonClick}>
           More <ArrowForwardIcon />
         </StyledButton>
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg
-            component="img"
-            sx={{ bgcolor: "#000" }}
-            alt="Logo"
-            src="src\public\pic1.PNG"
-          />
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>Crtly</Typography>
+          <StyledImg component="img" src="src\public\pic1.PNG" />
+          <StyledTypography>Crtly</StyledTypography>
           <Typography>Mobile App</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg
-            component="img"
-            sx={{ bgcolor: "#000" }}
-            alt="Logo"
-            src="src\public\pic2.PNG"
-          />
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>Tansto</Typography>
+          <StyledImg component="img" src="src\public\pic2.PNG" />
+          <StyledTypography>Tansto</StyledTypography>
           <Typography>Web Design</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg
-            component="img"
-            sx={{ bgcolor: "#000" }}
-            alt="Logo"
-            src="src\public\pic3.PNG"
-          />
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            Another Project
-          </Typography>
+          <StyledImg component="img" src="src\public\pic3.PNG" />
+          <StyledTypography>Another Project</StyledTypography>
           <Typography>Another Type</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg
-            component="img"
-            sx={{ bgcolor: "#000" }}
-            alt="Logo"
-            src="src\public\pic4.PNG"
-          />
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            More Project
-          </Typography>
+          <StyledImg component="img" src="src\public\pic4.PNG" />
+          <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
       </Grid>

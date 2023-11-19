@@ -1,8 +1,7 @@
 import React from "react";
 import { Grid, Link, Typography } from "@mui/material";
-import { StyledContainer } from "./style";
+import { StyledContainer, StyledTypography } from "./style";
 import { StyledImg } from "../home/components/projects/style";
-import { TestimonialsBox } from "../home/style";
 import Testimonials from "../home/components/Testimonials";
 
 const projects: React.FC = () => {
@@ -24,107 +23,50 @@ const projects: React.FC = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Necessitatibus praesentium eaque voluptate ducimus totam sapiente.
         </Grid>
+        {/* Grid-1 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link
-            href="your_link_here"
-            underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImg
-              component="img"
-              sx={{ bgcolor: "#000" }}
-              alt="Logo"
-              src="src\public\pic1.PNG"
-            />
+          <Link href="your_link_here" underline="none" target="_blank">
+            <StyledImg component="img" src="src\public\pic1.PNG" />
           </Link>
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>Crtly</Typography>
+          <StyledTypography>Crtly</StyledTypography>
           <Typography>Mobile App</Typography>
         </Grid>
+        {/* Grid-2 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link
-            href="your_link_here"
-            underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImg
-              component="img"
-              sx={{ bgcolor: "#000" }}
-              alt="Logo"
-              src="src\public\pic2.PNG"
-            />
+          <Link href="your_link_here" underline="none" target="_blank">
+            <StyledImg component="img" src="src\public\pic2.PNG" />
           </Link>
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>Tansto</Typography>
+          <StyledTypography>Tansto</StyledTypography>
           <Typography>Web Design</Typography>
         </Grid>
+        {/* Grid-3 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link
-            href="your_link_here"
-            underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImg
-              component="img"
-              sx={{ bgcolor: "#000" }}
-              alt="Logo"
-              src="src\public\pic3.PNG"
-            />
+          <Link href="your_link_here" underline="none" target="_blank">
+            <StyledImg component="img" src="src\public\pic3.PNG" />
           </Link>
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            Another Project
-          </Typography>
+          <StyledTypography>Another Project</StyledTypography>
           <Typography>Another Type</Typography>
         </Grid>
+        {/* Grid-4 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link
-            href="your_link_here"
-            underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImg
-              component="img"
-              sx={{ bgcolor: "#000" }}
-              alt="Logo"
-              src="src\public\pic4.PNG"
-            />
+          <Link href="your_link_here" underline="none" target="_blank">
+            <StyledImg component="img" src="src\public\pic4.PNG" />
           </Link>
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            More Project
-          </Typography>
+          <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
+        {/* Grid-5 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link
-            href="your_link_here"
-            underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImg
-              component="img"
-              sx={{ bgcolor: "#000" }}
-              alt="Logo"
-              src="src\public\pic4.PNG"
-            />
+          <Link href="your_link_here" underline="none" target="_blank">
+            <StyledImg component="img" src="src\public\pic5.PNG" />
           </Link>
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            More Project
-          </Typography>
+          <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
+        {/* Grid-6 */}
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg
-            component="img"
-            sx={{ bgcolor: "#000" }}
-            alt="Logo"
-            src="src\public\pic4.PNG"
-          />
-          <Typography sx={{ fontWeight: "600", mt: "10px" }}>
-            More Project
-          </Typography>
+          <StyledImg component="img" src="src\public\pic6.PNG" />
+          <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
       </Grid>
@@ -134,3 +76,5 @@ const projects: React.FC = () => {
 };
 
 export default projects;
+
+// add alt for the img

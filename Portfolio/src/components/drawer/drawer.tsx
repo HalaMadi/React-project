@@ -1,17 +1,8 @@
-import {
-  Box,
-  Drawer,
-  Button,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-} from "@mui/material";
-import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Drawer } from '@mui/material';
+import { useState } from 'react';
 const drawerComp: React.FC = () => {
-    const [openDrawer, setopenDrawer] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [openDrawer, setopenDrawer] = useState(false);
   return (
     <Drawer open={openDrawer} onClose={() => setopenDrawer(false)}>
       {/* <List>

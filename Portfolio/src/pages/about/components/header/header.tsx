@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import React from "react";
 import Person from "../../../../public/person.png";
 import { StyledTitle, StyleTypography, StyledButton } from "./style";

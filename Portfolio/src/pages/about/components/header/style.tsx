@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import styled from "styled-components";
 
 export const StyledTitle = styled(Typography)`

@@ -9,8 +9,6 @@ import {
   StyledAppBar,
 } from "./style";
 import DrawerComp from "../drawer";
-import { StyledLogo } from "../logo/style";
-import Logo from "../../public/Logo.svg";
 
 const Menu: React.FC = () => {
   const [value, setValue] = useState(0);
