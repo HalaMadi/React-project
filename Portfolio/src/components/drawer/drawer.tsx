@@ -14,7 +14,7 @@ const drawerComp: React.FC = () => {
     const [openDrawer, setopenDrawer] = useState(false);
   return (
     <Drawer open={openDrawer} onClose={() => setopenDrawer(false)}>
-      <List>
+      {/* <List>
         <ListItemButton>
           <ListItemIcon>
             <ListItemText>Login</ListItemText>
@@ -25,8 +25,8 @@ const drawerComp: React.FC = () => {
       <IconButton onClick={() => setopenDrawer(!openDrawer)}>
         <Box sx={{ bgcolor: "red" }}>
           <MenuIcon />
-        </Box>
-      </IconButton>
+        </Box> */}
+      {/* </IconButton> */}
     </Drawer>
   );
 };

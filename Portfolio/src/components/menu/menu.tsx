@@ -40,7 +40,6 @@ const Menu: React.FC = () => {
       <StyledAppBar position="static" style={{ height: "64px" }}>
         {isMatch ? (
           <>
-            {/* Render mobile menu with a Drawer */}
             <Toolbar>
               <Box>
                 <MenuIcon onClick={toggleDrawer(true)} />
@@ -58,7 +57,7 @@ const Menu: React.FC = () => {
           <>
             {/* Display full menu with tabs when the screen size is larger */}
             <Toolbar>
-              <StyledLogo component="img" alt="Logo" src={Logo} />
+              {/* <StyledLogo component="img" alt="Logo" src={Logo} /> */}
               <StyledTabs value={value} onChange={handleChange} centered>
                 <StyledTab label={<StyledLink to="/">Home</StyledLink>} />
                 <StyledTab

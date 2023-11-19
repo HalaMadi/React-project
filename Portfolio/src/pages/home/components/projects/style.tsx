@@ -24,5 +24,6 @@ export const StyledImg = styled(Box)`
   && {
     margin-top: 20px;
     border-radius: 30px;
+    max-width:100%;
   }
 `;

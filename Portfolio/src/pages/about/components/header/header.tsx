@@ -22,6 +22,7 @@ const Header: React.FC = () => {
           xs={6}
           md={6}
           lg={6}
+          container
           justifyContent="flex-end"
           alignItems="flex-end"
         >

@@ -10,7 +10,7 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <Container>
+    <>
       <Grid container direction="column" alignItems="center" spacing={2}>
         <Grid item>
           <Typography variant="h5">
@@ -18,13 +18,13 @@ const Contact: React.FC = () => {
           </Typography>
         </Grid>
         <Grid item>
-          <TextField label="Name" variant="outlined" />
+          <TextField label="Name"  />
         </Grid>
         <Grid item>
-          <TextField label="Email" variant="outlined" />
+          <TextField label="Email"  />
         </Grid>
         <Grid item>
-          <TextField label="Subject" variant="outlined" />
+          <TextField label="Subject" />
         </Grid>
         <Grid item>
           <TextareaAutosize
@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
           </Button>
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
 };
 
