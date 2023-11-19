@@ -64,7 +64,7 @@ const projects: React.FC = () => {
           <Typography>More Type</Typography>
         </Grid>
         {/* Grid-6 */}
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={6}> 
           <StyledImg component="img" src="src\public\pic6.PNG" />
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
