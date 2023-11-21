@@ -12,7 +12,7 @@ import DrawerComp from "../drawer";
 
 const Menu: React.FC = () => {
   const [value, setValue] = useState(0);
-  const handleChange = (event: SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
   const theme = useTheme();
