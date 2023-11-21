@@ -1,9 +1,16 @@
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
-import { ContactGrid, StyledTypography, ContactBox, FullWidthTextField, StyledTextarea } from './styles';
-
+import {
+  ContactGrid,
+  StyledTypography,
+  ContactBox,
+  FullWidthTextField,
+  SubmitButton
+} from './styles';
+// import { useForm } from 'react-hook-form';
 
 const Contact: React.FC = () => {
+  // const {handleSubmit}=useForm();
   return (
     <>
       <ContactGrid container direction="column" alignItems="center" spacing={2}>
@@ -16,7 +23,7 @@ const Contact: React.FC = () => {
           <ContactBox>
             <FullWidthTextField
               fullWidth
-              label="Full Width"
+              label="Name"
               variant="standard"
               InputProps={{
                 disableUnderline: true
@@ -27,7 +34,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <FullWidthTextField
-              label="Full Width"
+              label="EmailAddress"
               variant="standard"
               InputProps={{
                 disableUnderline: true
@@ -38,7 +45,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <FullWidthTextField
-              label="Full Width"
+              label="Mobile number"
               variant="standard"
               InputProps={{
                 disableUnderline: true
@@ -48,18 +55,29 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <StyledTextarea
-              aria-label="Message"
-              placeholder="Your message"
-              minRows={4}
+            <FullWidthTextField
+              label="How did you hear about us"
+              variant="standard"
+              InputProps={{
+                disableUnderline: true
+              }}
+            />
+          </ContactBox>
+        </Grid>{' '}
+        <Grid item xs={12}>
+          <ContactBox>
+            <FullWidthTextField
+              aria-label="Tell us more about your project"
+              variant="standard"
+              InputProps={{
+                disableUnderline: true
+              }}
             />
           </ContactBox>
         </Grid>
-        <Grid item >
+        <Grid item>
           <ContactBox>
-            <Button variant="contained" color="primary">
-              Send
-            </Button>
+            <SubmitButton >Submit</SubmitButton>
           </ContactBox>
         </Grid>
       </ContactGrid>

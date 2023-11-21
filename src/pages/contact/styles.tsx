@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Grid, TextField, Typography, TextareaAutosize } from '@mui/material';
+import { Grid, TextField, Typography,Button } from '@mui/material';
 
 export const ContactGrid = styled(Grid)`
   && {
@@ -19,23 +19,21 @@ export const StyledTypography = styled(Typography)`
 
 export const ContactBox = styled(Grid)`
   && {
-    width: 100%;
     padding: 8px;
   }
 `;
 
 export const FullWidthTextField = styled(TextField)`
   && {
-    width: 100%;
     background-color: #f9f9f9;
     border-radius: 50px;
   }
 `;
 
-export const StyledTextarea = styled(TextareaAutosize)`
+
+export const SubmitButton = styled(Button)`
   && {
-    width: calc(100% - 16px); /* Adjusting for padding */
-    padding: 8px;
-    resize: vertical;
+    color: white;
+    background-color: #000;
   }
 `;
