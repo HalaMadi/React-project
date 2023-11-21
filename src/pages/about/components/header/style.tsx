@@ -18,11 +18,12 @@ export const StyledButton = styled(Button)`
   && {
     margin-left: auto;
     margin-right: auto;
-    background: #f3eeee9e;
+    background-color: #f9f9f9;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: #000;
     border-radius: 30px;
     padding: 10px 50px;
+    
   }
 `;
