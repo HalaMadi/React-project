@@ -1,32 +1,44 @@
-import React from "react";
-import { Grid, Typography } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { StyledButton, StyledImg, StyledTypography } from "./style";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Grid, Typography } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {
+  ProjectTitle,
+  StyledButton,
+  StyledImg,
+  StyledTypography,
+  ProjectSubTitle
+} from './style';
+import { useNavigate } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   const navigate = useNavigate();
-  
-    
   const handleMoreButtonClick = () => {
-    // Navigate to the '/projects' route when the More button is clicked
-    navigate("/projects");
+    navigate('/projects');
   };
   return (
     <>
-      <Typography variant="h3">Projects</Typography>
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        md={12}
-        container
-        justifyContent="flex-end"
-        alignItems="flex-end"
-      >
-        <StyledButton onClick={handleMoreButtonClick}>
-          More <ArrowForwardIcon />
-        </StyledButton>
+      <ProjectTitle variant="h3">Projects</ProjectTitle>
+      <Grid container>
+        <Grid item xs={12} sm={6} md={6}>
+          <ProjectSubTitle>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
+            voluptatem mollitia illum. Facere dolor quas incidunt, eligendi
+            temporibus,
+          </ProjectSubTitle>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={6}
+          container
+          justifyContent="flex-end"
+          alignItems="flex-end"
+        >
+          <StyledButton onClick={handleMoreButtonClick}>
+            More <ArrowForwardIcon />
+          </StyledButton>
+        </Grid>
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={6}>

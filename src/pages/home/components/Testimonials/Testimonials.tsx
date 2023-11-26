@@ -1,15 +1,20 @@
-import { Container, Grid, Typography } from '@mui/material';
-import React from 'react'
-import { TestimonialsBox, StyledTitle, StyledTypography } from './style';
+import { Grid } from '@mui/material';
+import React from 'react';
+import {
+  TestimonialsBox,
+  StyledTitle,
+  StyledTypography,
+  StyledBrife
+} from './style';
 
 const Testimonials: React.FC = () => {
   return (
-    <Container>
+    <>
       <TestimonialsBox>
         <StyledTitle variant="h3">Testimonials</StyledTitle>
         <Grid container>
-          <Grid item xs={8} md={6}>
-            <Typography>
+          <Grid item xs={8} md={6} lg={8}>
+            <StyledBrife>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
               fugiat quo ducimus, dicta nulla nobis labore beatae at! In velit
               ullam ipsa quae veritatis voluptatibus! Cum excepturi ipsa
@@ -18,25 +23,26 @@ const Testimonials: React.FC = () => {
               cupiditate sed culpa deserunt? Quod, odio accusamus, sequi esse
               incidunt cumque natus voluptate aliquid molestias, officia
               corporis.
-            </Typography>
+            </StyledBrife>
           </Grid>
           <Grid
             item
             xs={4}
             md={6}
+            lg={4}
             container
             justifyContent="flex-end"
             alignItems="flex-end"
           >
             <div>
               <StyledTypography>Chirs Ellingoton</StyledTypography>
-              <Typography>Product Lead.Gatha</Typography>
+              <StyledTypography>Product Lead.Gatha</StyledTypography>
             </div>
           </Grid>
         </Grid>
       </TestimonialsBox>
-    </Container>
+    </>
   );
 };
 
-export default Testimonials
+export default Testimonials;

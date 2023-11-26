@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
     setValue(newValue);
   };
   const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
   // State for handling mobile drawer open/close
   const [drawerOpen, setDrawerOpen] = useState(false);

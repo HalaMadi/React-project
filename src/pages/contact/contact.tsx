@@ -7,10 +7,8 @@ import {
   FullWidthTextField,
   SubmitButton
 } from './styles';
-// import { useForm } from 'react-hook-form';
 
 const Contact: React.FC = () => {
-  // const {handleSubmit}=useForm();
   return (
     <>
       <ContactGrid container direction="column" alignItems="center" spacing={2}>
@@ -67,7 +65,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <FullWidthTextField
-              aria-label="Tell us more about your project"
+              label="Tell us more about your project"
               variant="standard"
               InputProps={{
                 disableUnderline: true
@@ -77,7 +75,7 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item>
           <ContactBox>
-            <SubmitButton >Submit</SubmitButton>
+            <SubmitButton>Submit</SubmitButton>
           </ContactBox>
         </Grid>
       </ContactGrid>

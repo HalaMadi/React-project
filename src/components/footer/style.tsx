@@ -19,6 +19,9 @@ export const StyledFooter__Title = styled(Typography)`
     @media (max-width: 768px) {
       font-size: 100px;
     }
+    @media (max-width: 375px) {
+      font-size: 50px;
+    }
   }
 `;
 export const StyledFooter__Button = styled(Typography)`
@@ -28,6 +31,11 @@ export const StyledFooter__Button = styled(Typography)`
     border-radius: 50px;
     padding: 20px 40px;
     margin: 20px;
+    @media (max-width: 375px) {
+      padding: 10px 20px;
+
+      font-size: 14px;
+    }
   }
 `;
 export const StyledLink = styled(Link)`

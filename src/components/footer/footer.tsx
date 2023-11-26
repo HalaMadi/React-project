@@ -26,12 +26,11 @@ const footer: React.FC = () => {
           </Grid>
           <Grid
             item
-            xs={12}
+            xs={6}
             md={6}
             container
             justifyContent="flex-end"
-            alignItems="flex-end"
-            gap={6}
+ gap={3}
           >
             <StyledLink href="#">Dribble</StyledLink>
             <StyledLink href="#">Instagram</StyledLink>
