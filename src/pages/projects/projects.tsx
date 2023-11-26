@@ -1,20 +1,20 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { StyledContainer, StyledTypography } from './style';
+import { StyledContainer, StyledTypography, StyledLink } from './style';
 import { StyledImg } from '../home/components/projects/style';
-import Testimonials from '../home/components/Testimonials';
-import { Link } from 'react-router-dom';
+import Testimonials from '../home/components/Testimonials/Testimonials';
+import { Title } from '../home/components/expertise/style';
 
 const projects: React.FC = () => {
   return (
     <StyledContainer>
       <Grid container spacing={3}>
-        <Grid xs={6} sm={6} md={6}>
-          <Typography variant="h3">Projects</Typography>
+        <Grid xs={12} sm={6} md={6}>
+          <Title variant="h3">Projects</Title>
         </Grid>
         <Grid
           item
-          xs={6}
+          xs={12}
           sm={6}
           md={6}
           container
@@ -26,41 +26,41 @@ const projects: React.FC = () => {
         </Grid>
         {/* Grid-1 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link to="/projects/tansto">
+          <StyledLink to="/projects/tansto">
             <StyledImg component="img" src="src\public\pic1.PNG" />
             <StyledTypography>Crtly</StyledTypography>
             <Typography>Mobile App</Typography>
-          </Link>
+          </StyledLink>
         </Grid>
         {/* Grid-2 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link to="/projects/website">
+          <StyledLink to="/projects/website">
             <StyledImg component="img" src="src\public\pic2.PNG" />
             <StyledTypography>Tansto</StyledTypography>
             <Typography>Web Design</Typography>
-          </Link>
+          </StyledLink>
         </Grid>
         {/* Grid-3 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link to="/tansto">
+          <StyledLink to="/tansto">
             <StyledImg component="img" src="src\public\pic3.PNG" />
-          </Link>
+          </StyledLink>
           <StyledTypography>Another Project</StyledTypography>
           <Typography>Another Type</Typography>
         </Grid>
         {/* Grid-4 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link to="/tansto">
+          <StyledLink to="/tansto">
             <StyledImg component="img" src="src\public\pic4.PNG" />
-          </Link>
+          </StyledLink>
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
         {/* Grid-5 */}
         <Grid item xs={12} sm={6} md={6}>
-          <Link to="/tansto">
+          <StyledLink to="/tansto">
             <StyledImg component="img" src="src\public\pic5.PNG" />
-          </Link>
+          </StyledLink>
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
