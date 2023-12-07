@@ -4,7 +4,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 export const StyledButton = styled(Button)`
   && {
-    background: #d0cece92;
+    background: #dedddd68;
     color: #000;
     font-size: 20px;
     border-radius: 30px;
@@ -20,6 +20,7 @@ export const StyledButton = styled(Button)`
       font-size: 10px;
       padding: 10px 4px;
       margin-right: 0;
+      margin-top: 0;
     }
   }
 `;

@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
       <TestimonialsBox>
         <StyledTitle variant="h3">Testimonials</StyledTitle>
         <Grid container>
-          <Grid item xs={8} md={6} lg={8}>
+          <Grid item xs={12} md={6} lg={8}>
             <StyledBrife>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
               fugiat quo ducimus, dicta nulla nobis labore beatae at! In velit
@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
           </Grid>
           <Grid
             item
-            xs={4}
+            xs={12}
             md={6}
             lg={4}
             container

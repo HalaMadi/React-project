@@ -1,11 +1,12 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
-import { StyledContainer, StyledTypography, StyledLink } from './style';
+import { Grid, Typography, useTheme } from '@mui/material';
+import { StyledContainer, StyledTypography, StyledLink, StyledButton, StyledBox } from './style';
 import { StyledImg } from '../home/components/projects/style';
 import Testimonials from '../home/components/Testimonials/Testimonials';
 import { Title } from '../home/components/expertise/style';
 
 const projects: React.FC = () => {
+  const theme = useTheme();
   return (
     <StyledContainer>
       <Grid container spacing={3}>
@@ -28,17 +29,17 @@ const projects: React.FC = () => {
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/projects/tansto">
             <StyledImg component="img" src="src\public\pic1.PNG" />
-            <StyledTypography>Crtly</StyledTypography>
-            <Typography>Mobile App</Typography>
           </StyledLink>
+          <StyledTypography>Crtly</StyledTypography>
+          <Typography>Mobile App</Typography>
         </Grid>
         {/* Grid-2 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/projects/website">
             <StyledImg component="img" src="src\public\pic2.PNG" />
-            <StyledTypography>Tansto</StyledTypography>
-            <Typography>Web Design</Typography>
           </StyledLink>
+          <StyledTypography>Tansto</StyledTypography>
+          <Typography>Web Design</Typography>
         </Grid>
         {/* Grid-3 */}
         <Grid item xs={12} sm={6} md={6}>
@@ -71,6 +72,10 @@ const projects: React.FC = () => {
           <Typography>More Type</Typography>
         </Grid>
       </Grid>
+      <StyledBox>
+        <StyledButton themeMode={theme.palette.mode}
+        >Load More</StyledButton>
+      </StyledBox>
       <Testimonials />
     </StyledContainer>
   );
@@ -78,4 +83,3 @@ const projects: React.FC = () => {
 
 export default projects;
 
-// add alt for the img

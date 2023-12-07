@@ -14,7 +14,9 @@ const home: React.FC = () => {
         </StyledContainer>
         <Expertise />
       </StyledHomeContainer>
-      <BoxDesign>design for digital exper</BoxDesign>
+      <BoxDesign sx={{ textAlign: 'center', mt: 5 }}>
+        design for digital exper
+      </BoxDesign>
       <StyledHomeContainer>
         <Testimonials />
       </StyledHomeContainer>

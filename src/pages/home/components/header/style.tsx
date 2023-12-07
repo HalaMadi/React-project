@@ -17,6 +17,7 @@ export const StyledHomeTitle = styled(Typography)`
 
     @media (max-width: 768px) {
       font-size: 100px;
+      text-align: center;
     }
     @media (max-width: 375px) {
       font-size: 65px;

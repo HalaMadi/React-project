@@ -33,10 +33,10 @@ export const BoxDesign = styled(Box)`
     margin-top: 50px;
     font-size: 110px;
     @media (max-width: 768px) {
-      font-size: 80px;
+      font-size: 70px;
     }
     @media (max-width: 375px) {
-      font-size: 38px;
+      font-size: 35px;
     }
   }
 `;
