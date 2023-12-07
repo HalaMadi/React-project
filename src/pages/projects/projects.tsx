@@ -6,6 +6,7 @@ import Testimonials from '../home/components/Testimonials/Testimonials';
 import { Title } from '../home/components/expertise/style';
 
 const projects: React.FC = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const theme = useTheme();
   return (
     <StyledContainer>

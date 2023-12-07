@@ -18,7 +18,7 @@ const App: React.FC = () => {
   return (
     <>
     <ThemeProvider theme={theme}>
-       <CssBaseline />
+    <CssBaseline />
       <NightModeToggle />
       <Menu />
       <Routes>

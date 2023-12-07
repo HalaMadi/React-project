@@ -6,6 +6,8 @@ import {
   StyledTitle,
   StyledTypography,
   StyledDivider,
+  RhigtGrid,
+  ProcessTypography
 } from "./style";
 
 const Design: React.FC = () => {
@@ -19,18 +21,18 @@ const Design: React.FC = () => {
             <LineBreak />
             Discovery
           </StyledTypography>
-          <Typography variant="body1" sx={{ maxWidth: "50%" }}>
+          <ProcessTypography variant="body1" >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptates, cum harum! Quidem repellat cum error alias natus rerum
             sed autem aliquam nemo vitae unde, quaerat animi eveniet temporibus
-            eum excepturi?{" "}
-          </Typography>
+            eum excepturi?
+          </ProcessTypography>
         </Grid>
-        <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <Grid
+        <RhigtGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <RhigtGrid
             container
             spacing={3}
-            sx={{ width: "50%", justifyContent: "flex-end" }}
+            sx={{ width: "50%" }}
           >
             <Grid item xs={12}>
               <StyledDivider />
@@ -46,8 +48,8 @@ const Design: React.FC = () => {
                 optio esse cupiditate modi fuga nostrum aut ratione?{" "}
               </Typography>
             </Grid>
-          </Grid>
-        </Grid>
+          </RhigtGrid>
+        </RhigtGrid>
         <Grid item xs={12}>
           <StyledDivider />
           <StyledTypography>
@@ -55,23 +57,23 @@ const Design: React.FC = () => {
             <LineBreak />
             Discovery
           </StyledTypography>
-          <Typography variant="body1" sx={{ maxWidth: "50%" }}>
+          <ProcessTypography variant="body1">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptates, cum harum! Quidem repellat cum error alias natus rerum
             sed autem aliquam nemo vitae unde, quaerat animi eveniet temporibus
-            eum excepturi?{" "}
-          </Typography>
+            eum excepturi?
+          </ProcessTypography>
         </Grid>
-        <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <Grid
+        <RhigtGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <RhigtGrid
             container
             spacing={3}
-            sx={{ width: "50%", justifyContent: "flex-end" }}
+            sx={{ width: "50%" }}
           >
             <Grid item xs={12}>
               <StyledDivider />
               <StyledTypography>
-                03-
+                04-
                 <LineBreak />
                 Design
               </StyledTypography>
@@ -82,8 +84,8 @@ const Design: React.FC = () => {
                 deleniti nostrum vel libero non.
               </Typography>
             </Grid>
-          </Grid>
-        </Grid>
+          </RhigtGrid>
+        </RhigtGrid>
       </Grid>
     </DesignContainer>
   );

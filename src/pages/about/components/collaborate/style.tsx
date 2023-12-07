@@ -1,9 +1,25 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import styled from "styled-components";
 
 export const StyledBoxTitle = styled(Box)`
   && {
     margin: 50px 0px;
+    @media (max-width: 375px) {
+      font-size: 10px;
+    }
+  }
+`;
+export const CollaborateGrid = styled(Grid)`
+  && {
+
+  }
+`;
+
+export const Title = styled(Typography)`
+  && {
+    @media (max-width: 375px) {
+      font-size: 30px;
+    }
   }
 `;
 export const GridTypography = styled(Typography)`
