@@ -1,6 +1,5 @@
 import React from "react";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import { StyledButton } from "./style";
+import { StyledButton, ArrowIcon } from './style';
 
 const ScrollDownButton: React.FC = () => {
   const handleClick = () => {
@@ -11,10 +10,10 @@ const ScrollDownButton: React.FC = () => {
   };
 
   return (
-      <StyledButton onClick={handleClick}>
-        Scroll Down
-        <ArrowDownwardIcon />
-      </StyledButton>
+    <StyledButton onClick={handleClick}>
+      Scroll Down
+      <ArrowIcon />
+    </StyledButton>
   );
 };
 

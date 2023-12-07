@@ -5,12 +5,13 @@ import styled from "styled-components";
 export const StyledContainer = styled(Container)`
   && {
     margin: 100px 0px;
+    
   }
 `;
 export const StyledHomeContainer = styled(Container)`
   && {
     @media (max-width: 375px) {
-      width: 100%;
+      max-width: 100%;
     }
   }
 `;
@@ -32,13 +33,16 @@ export const BoxDesign = styled(Box)`
     margin-top: 50px;
     font-size: 110px;
     @media (max-width: 768px) {
-      font-size: 80px;
+      font-size: 70px;
+    }
+    @media (max-width: 375px) {
+      font-size: 35px;
     }
   }
 `;
 export const TestimonialsBox = styled(Box)`
   && {
-    margin: 50px 0px;
+    /* margin: 40px 0px; */
   }
 `;
 export const StyledTitle = styled(Typography)`

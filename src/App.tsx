@@ -1,21 +1,25 @@
 // App.js
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Menu from "./components/menu/menu";
-import Home from "./pages/home";
-import Projects from "./pages/projects";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Logo from "./components/logo";
-import Footer from "./components/footer";
-import Tansto from "./pages/projects/Tansto/tansto";
-import Website from "./pages/projects/website";
-
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Menu from './components/menu/menu';
+import Home from './pages/home';
+import Projects from './pages/projects';
+import About from './pages/about';
+import Contact from './pages/contact';
+import Footer from './components/footer';
+import Tansto from './pages/projects/Tansto/tansto';
+import Website from './pages/projects/website';
+import { useThemeContext } from './theme/ThemeContextProvider';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import NightModeToggle from './components/themeButton/themeButton';
 
 const App: React.FC = () => {
+  const { theme } = useThemeContext();
   return (
     <>
-      <Logo />
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
+      <NightModeToggle />
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,6 +30,7 @@ const App: React.FC = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+    </ThemeProvider>
     </>
   );
 };
