@@ -11,7 +11,6 @@ export const StyledLink = styled(Link)`
     position: relative;
     display: inline-block;
     padding-left: 10px;
-
     &.Mui-selected,
     &.Mui-selected:hover {
       color: #000;
@@ -21,7 +20,6 @@ export const StyledLink = styled(Link)`
     }
   }
 `;
-
 export const ProjectIndicator = styled.span`
   background-color: #686868;
   color: white;
@@ -33,7 +31,6 @@ export const ProjectIndicator = styled.span`
   transform: translateY(-50%);
   right: calc(100% + -8px);
 `;
-
 export const StyledTab = styled(Tab)`
   && {
     border-radius: 40px;
@@ -47,7 +44,6 @@ export const StyledTab = styled(Tab)`
     }
   }
 `;
-
 export const CenteredContainer = styled.div`
   && {
     margin-left:10px;
@@ -76,13 +72,9 @@ export const StyledAppBar = styled(AppBar)`
     border: none;
   }
 `;
-
 export const StyledTabs = styled(Tabs)<{ themeMode: string }>`
   && {
     & button {
-      &:focus {
-        background-color: #fff;
-      }
       transition:
         background-color 0.3s ease,
         color 0.3s ease;

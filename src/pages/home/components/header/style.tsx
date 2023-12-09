@@ -8,13 +8,11 @@ export const StyledContainer = styled(Container)`
     }
   }
 `;
-
 export const StyledHomeTitle = styled(Typography)`
   && {
     font-weight: 800;
     font-size: 200px;
     margin-top: 40px;
-
     @media (max-width: 768px) {
       font-size: 100px;
       text-align: center;
@@ -26,16 +24,13 @@ export const StyledHomeTitle = styled(Typography)`
     }
   }
 `;
-
 export const LineBreak = styled.br`
-
 `;
 export const StyledTypography = styled(Typography)`
   && {
     font-size: 30px;
     font-weight: 800;
     font-family: 'Nunito Sans', sans-serif;
-    
     @media (max-width: 768px) {
       font-size: 20px;
     }
