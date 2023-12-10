@@ -14,11 +14,11 @@ export const StyledButton = styled(Button) <{ themeMode: string }>`
     font-weight: bold;
     margin: 25px 90px;
     font-family: 'Varela Round', sans-serif;
-    @media screen and(max-width: 768px) {
+    @media (max-width: 768px) {
       font-size: 14px;
       padding: 15px 10px;
     }
-    @media screen and(max-width: 375px) {
+    @media (max-width: 375px) {
       font-size: 10px;
       padding: 10px 4px;
       margin-right: 0;
@@ -28,7 +28,7 @@ export const StyledButton = styled(Button) <{ themeMode: string }>`
 `;
 export const ArrowIcon = styled(ArrowDownwardIcon)`
   && {
-    @media screen and(max-width: 375px) {
+    @media (max-width: 375px) {
       font-size: 12px;
     }
   }

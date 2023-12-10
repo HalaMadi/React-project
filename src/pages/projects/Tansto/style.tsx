@@ -38,7 +38,7 @@ export const BoxImg = styled(Box)`
   && {
     margin: auto 100px;
     max-width: 100%;
-    @media screen and( max-width:375px) {
+    @media ( max-width:375px) {
     width:200px;
     }
   }
@@ -50,7 +50,7 @@ export const Challenge = styled(Typography)`
     font-weight: 800;
     max-width: 70%;
     margin-top: 30px;
-    @media screen and(max-width: 375px) {
+    @media (max-width: 375px) {
       font-size: 20px;
       max-width:100%;
     }
@@ -59,7 +59,7 @@ export const Challenge = styled(Typography)`
 export const NextGrid = styled(Grid)`
   && {
     margin: 30px 40px;
-    @media screen and(max-width: 375px) {
+    @media (max-width: 375px) {
       display: block;
     }
   }
@@ -68,7 +68,7 @@ export const GridTypography = styled(Typography)`
   && {
     margin: auto 20px;
     font-weight: 800;
-    @media screen and(max-width: 375px) {
+    @media (max-width: 375px) {
       display: block;
     }
   }
