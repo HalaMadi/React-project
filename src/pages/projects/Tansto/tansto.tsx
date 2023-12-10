@@ -14,14 +14,32 @@ import {
   NextGrid,
   GridTypography,
   NextGrid__Img,
-  Projects
+  Projects,
+  Tansto__Breadcrumbs
 } from './style';
-import {  Grid, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext'
+
 
 const tansto: React.FC = () => {
+
   return (
     <StyledContainer>
+      <Stack>
+        <Tansto__Breadcrumbs separator="›" aria-label="breadcrumb">
+          mui
+        </Tansto__Breadcrumbs>
+        <Tansto__Breadcrumbs separator="-" aria-label="breadcrumb">
+          mui
+        </Tansto__Breadcrumbs>
+        <Tansto__Breadcrumbs
+          separator={<NavigateNextIcon fontSize="small" />}
+          aria-label="breadcrumb"
+        >
+          mui
+        </Tansto__Breadcrumbs>
+      </Stack>
       <StyledTypography variant="h3">
         Tasto impact -- <LineBreak />a unified visual brand for a well being
         retreat

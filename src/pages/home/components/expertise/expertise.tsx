@@ -1,15 +1,15 @@
 import React from "react";
-import { Expertise__StyledBox, Expertise__SubTitle, Expertise__Title } from './style';
+import { Expertise__StyledBox, SubTitle, Title } from './style';
 import {  Grid, Typography } from "@mui/material";
 
 const Expertise: React.FC = () => {
   return (
     < >
-      <Expertise__Title variant="h3">Expertise</Expertise__Title>
+      <Title variant="h3">Expertise</Title>
       <Grid container>
         <Grid item xs={12} sm={6} md={6} lg={6}>
           <Expertise__StyledBox>
-            <Expertise__SubTitle gutterBottom>Branding</Expertise__SubTitle>
+            <SubTitle gutterBottom>Branding</SubTitle>
             <Typography>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
               impedit error, adipisci voluptate tempore distinctio incidunt
@@ -20,7 +20,7 @@ const Expertise: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={6}>
           <Expertise__StyledBox>
-            <Expertise__SubTitle gutterBottom>UI Design</Expertise__SubTitle>
+            <SubTitle gutterBottom>UI Design</SubTitle>
             <Typography>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
               impedit error, adipisci voluptate tempore distinctio incidunt
@@ -31,7 +31,7 @@ const Expertise: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={6}>
           <Expertise__StyledBox>
-            <Expertise__SubTitle gutterBottom>Ux Design</Expertise__SubTitle>
+            <SubTitle gutterBottom>Ux Design</SubTitle>
             <Typography>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
               impedit error, adipisci voluptate tempore distinctio incidunt
@@ -43,7 +43,7 @@ const Expertise: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={6}>
           <Expertise__StyledBox>
-            <Expertise__SubTitle gutterBottom>Development</Expertise__SubTitle>
+            <SubTitle gutterBottom>Development</SubTitle>
             <Typography>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
               impedit error, adipisci voluptate tempore distinctio incidunt

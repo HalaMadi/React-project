@@ -3,7 +3,7 @@ import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { LineBreak } from '../../home/components/header/style';
 import { BoxImg } from '../Tansto/style';
-import { StyledContainer, StyledTypography } from '../style';
+import { StyledButton, StyledContainer, StyledTypography } from '../style';
 import pic from '../../../public/pic2-2.png';
 import pic1 from '../../../public/pic1.png';
 import pic2 from '../../../public/pic2.png';
@@ -27,7 +27,7 @@ import {
   StyledLogo,
   ToolsGrid
 } from './style';
-import { StyledButton, StyledImg } from '../../home/components/projects/style';
+import { StyledImg } from '../../home/components/projects/style';
 import { useNavigate } from 'react-router-dom';
 const website: React.FC = () => {
   const theme = useTheme();

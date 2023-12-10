@@ -1,10 +1,16 @@
-import { Typography, Box, Grid } from '@mui/material';
+import { Typography, Box, Grid, Breadcrumbs } from '@mui/material';
 import styled from 'styled-components';
 
 export const Tansto__Typography = styled(Typography)`
   && {
     font-weight: 400 !important;
     font-size: 65px;
+  }
+`; 
+export const Tansto__Breadcrumbs = styled(Breadcrumbs)`
+  && {
+    color: #080808;
+    font-size: 35px;
   }
 `;
 
