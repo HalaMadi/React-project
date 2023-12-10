@@ -28,7 +28,7 @@ export const StyledBox = styled(Box)`
 export const BoxDesign = styled(Box) <{ themeMode: string }>`
   && {
     background-color: ${({ themeMode }) =>
-    themeMode === 'dark' ? '#181818' : '#f3eeeebd'};    color: #fff;
+    themeMode === 'dark' ? '#181818' : '#000'};    color: #fff;
     margin-top: 50px;
     font-size: 110px;
     @media (max-width: 768px) {
