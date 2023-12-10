@@ -10,7 +10,7 @@ export const Project__Title = styled(Typography)`
       font-size: 25px;
     }
   }
-`;export const Project__SubTitle = styled(Typography)`
+`; export const Project__SubTitle = styled(Typography)`
   && {
     margin: 15px 0px;
     font-size: 18px;
@@ -18,15 +18,16 @@ export const Project__Title = styled(Typography)`
     font-size: 12px;
   }}
 `;
-export const Project__Button = styled(Button)`
+export const Project__Button = styled(Button) <{ themeMode: string }>`
   && {
-    background: #f3eeee9e;
+      background-color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#181818' : '#f3eeeebd'};
     font-size: 15px;
     font-weight: 600;
-    color: #000;
+    color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#c5c4c4' : '#000'};
     border-radius: 30px;
-    gap: 10px;
-    padding: 20px;
+    gap: 5px;
     @media (max-width: 375px) {
       font-size: 12px;
       margin-top: 0;

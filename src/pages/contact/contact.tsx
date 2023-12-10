@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <Contact__TextField
-              placeholder="Tell us more about your project"
+              placeholder="How do you hear about us?"
               {...register('hearAbout')}
               error={!!errors?.hearAbout}
               helperText={errors.hearAbout?.message}

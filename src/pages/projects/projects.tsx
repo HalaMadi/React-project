@@ -5,8 +5,7 @@ import { StyledImg } from '../home/components/projects/style';
 import Testimonials from '../home/components/Testimonials/Testimonials';
 import { Title } from '../home/components/expertise/style';
 
-const projects: React.FC = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+const Projects: React.FC = () => {
   const theme = useTheme();
   return (
     <StyledContainer>
@@ -82,5 +81,5 @@ const projects: React.FC = () => {
   );
 };
 
-export default projects;
+export default Projects;
 

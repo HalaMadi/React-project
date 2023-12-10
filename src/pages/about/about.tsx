@@ -3,7 +3,7 @@ import Header from "./components/header/header";
 import Collaborate from "./components/collaborate/collaborate";
 import Design from "./components/design/design";
 
-const about: React.FC = () => {
+const About: React.FC = () => {
   return (
     <>
     <Header/>
@@ -13,4 +13,4 @@ const about: React.FC = () => {
   );
 };
 
-export default about;
+export default About;

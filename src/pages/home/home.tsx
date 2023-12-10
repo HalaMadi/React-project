@@ -4,7 +4,9 @@ import Projects from './components/projects';
 import { BoxDesign, StyledContainer, StyledHomeContainer } from './style';
 import Expertise from './components/expertise';
 import Testimonials from './components/Testimonials';
-const home: React.FC = () => {
+import { useTheme } from '@mui/material';
+const Home: React.FC = () => {
+  const theme = useTheme();
   return (
     <>
       <StyledHomeContainer>
@@ -14,7 +16,8 @@ const home: React.FC = () => {
         </StyledContainer>
         <Expertise />
       </StyledHomeContainer>
-      <BoxDesign sx={{ textAlign: 'center', mt: 5 }}>
+      <BoxDesign themeMode={theme.palette.mode}
+        sx={{ textAlign: 'center', mt: 5 }}>
         design for digital exper
       </BoxDesign>
       <StyledHomeContainer>
@@ -24,4 +27,4 @@ const home: React.FC = () => {
   );
 };
 
-export default home;
+export default Home;

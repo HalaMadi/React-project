@@ -25,10 +25,10 @@ export const StyledBox = styled(Box)`
     margin: 20px 0px;
   }
 `;
-export const BoxDesign = styled(Box)`
+export const BoxDesign = styled(Box) <{ themeMode: string }>`
   && {
-    background: #000;
-    color: #fff;
+    background-color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#181818' : '#f3eeeebd'};    color: #fff;
     margin-top: 50px;
     font-size: 110px;
     @media (max-width: 768px) {

@@ -2,10 +2,12 @@ import { Button } from '@mui/material';
 import styled from 'styled-components';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(Button) <{ themeMode: string }>`
   && {
-    background: #dedddd68;
-    color: #000;
+    background-color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#181818' : '#f3eeeebd'};    color: #000;
+    color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#c5c4c4' : '#000'};
     font-size: 20px;
     border-radius: 30px;
     padding: 20px;

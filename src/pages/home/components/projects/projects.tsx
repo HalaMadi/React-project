@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {
   Project__Title,
@@ -11,6 +11,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const Projects: React.FC = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
   const handleMoreButtonClick = () => {
     navigate('/projects');
@@ -35,7 +36,7 @@ const Projects: React.FC = () => {
           justifyContent="flex-end"
           alignItems="flex-end"
         >
-          <Project__Button onClick={handleMoreButtonClick}>
+          <Project__Button onClick={handleMoreButtonClick} themeMode={theme.palette.mode}>
             More <ArrowForwardIcon />
           </Project__Button>
         </Grid>

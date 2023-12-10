@@ -22,7 +22,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 
 
-const tansto: React.FC = () => {
+const Tansto: React.FC = () => {
 
   return (
     <StyledContainer>
@@ -152,4 +152,4 @@ const tansto: React.FC = () => {
   );
 };
 
-export default tansto;
+export default Tansto;
