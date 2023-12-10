@@ -74,8 +74,8 @@ const website: React.FC = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
               magnam.
             </Typography>
-            <Grid item xs={8} md={8}>
-              <Typography variant="h4">
+            <Grid item xs={12} md={8}>
+              <Typography >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit fugiat quo ducimus, dicta nulla nobis labore beatae at!
                 In velit ullam ipsa quae veritatis voluptatibus! Cum excepturi
@@ -102,7 +102,7 @@ const website: React.FC = () => {
           </Grid>
         </TestimonialsBox>
       </Grid>
-      <Grid container marginTop={10} sx={{ marginLeft: '100px' }}>
+      <Grid container marginTop={10} spacing={4}>
         <Grid item xs={12} md={4} lg={4}>
           <Typography variant="h2">15+</Typography>
           <Typography>Launched Brands</Typography>
@@ -117,12 +117,12 @@ const website: React.FC = () => {
         </Grid>
       </Grid>
       <Grid container marginTop={30}>
-        <Grid item xs={4} md={4} lg={4}>
+        <Grid item xs={12} md={4} lg={4}>
           <Typography variant="h2" fontWeight={'bold'}>
             FAQs about Branding
           </Typography>
         </Grid>
-        <Grid item xs={8} md={8} lg={8}>
+        <Grid item xs={12} md={8} lg={8}>
           <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
