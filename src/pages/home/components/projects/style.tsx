@@ -14,7 +14,6 @@ export const ProjectTitle = styled(Typography)`
   && {
     margin: 15px 0px;
     font-size: 18px;
-  
   @media (max-width: 768px) {
     font-size: 12px;
   }}

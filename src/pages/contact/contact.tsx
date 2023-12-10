@@ -26,7 +26,6 @@ const schema = yup.object().shape({
 
 const Contact: React.FC = () => {
   const theme = useTheme();
-
   const {
     register,
     handleSubmit,
@@ -34,7 +33,6 @@ const Contact: React.FC = () => {
   } = useForm({
     resolver: yupResolver(schema)
   });
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (data: any) => {
     try {
@@ -45,18 +43,15 @@ const Contact: React.FC = () => {
         hearAbout: data.hearAbout || '',
         projectDetails: data.projectDetails
       });
-
       console.log('Form data saved to Firestore:', data);
-
     } catch (error) {
       console.error('Error saving form data:', error);
     }
   };
- const { data, isLoading, isError } = useFirestoreData();
-
- console.log('Data:', data);
- console.log('Loading:', isLoading);
- console.log('Error:', isError);
+  const { data, isLoading, isError } = useFirestoreData();
+  console.log('Loading:', isLoading);
+  console.log('Error:', isError);
+  console.log('Data:', data);
   return (
     <>
       <ContactGrid
@@ -153,7 +148,6 @@ const Contact: React.FC = () => {
           </ContactBox>
         </Grid>
       </ContactGrid>
-     
     </>
   );
 };

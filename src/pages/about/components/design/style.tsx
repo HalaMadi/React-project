@@ -10,14 +10,14 @@ export const StyledTitle = styled(Typography)`
 `;
 export const StyledTypography = styled(Typography)`
     &&{
-        font-size: 25px;
-        font-weight: bold;
-        padding: 10px 0px;
+      font-weight: bold;
+      padding: 10px 0px;
+      font-size: 25px;
     }
 `;
 export const DesignContainer = styled(Container)`
     &&{
-        margin-bottom: 200px;
+    margin-bottom: 200px;
     }
 `;
 export const StyledDivider = styled(Divider)`
@@ -27,16 +27,15 @@ export const StyledDivider = styled(Divider)`
 `; export const RhigtGrid = styled(Grid)`
   &&{
     @media (max-width: 375px) {
-width: 100%;
-justify-content: flex-start;
+      justify-content: flex-start;
+      width: 100%;
     }
   }  
 `; export const ProcessTypography = styled(Typography)`
-
   &&{
     max-width: 50%;
     @media (max-width: 375px) {
-max-width: 100%;
+    max-width: 100%;
     }
   }  
 `;

@@ -9,7 +9,6 @@ export const Title = styled(Typography)`
     }
   }
 `;
-
 export const SubTitle = styled(Typography)`
   && {
     font-size: 30px;
@@ -22,7 +21,6 @@ export const SubTitle = styled(Typography)`
     }
   }
 `;
-
 export const StyledBox = styled(Box)`
   && {
     padding: 20px 0px;

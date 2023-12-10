@@ -5,7 +5,6 @@ import styled from "styled-components";
 export const StyledContainer = styled(Container)`
   && {
     margin: 100px 0px;
-    
   }
 `;
 export const StyledHomeContainer = styled(Container)`

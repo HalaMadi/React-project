@@ -32,12 +32,13 @@ export const StyledLink = styled(Link)`
 export const StyledButton = styled(Button)<{ themeMode: string }>`
   && {
     border-radius: 30px;
-    color: #000;
+    color:${({ themeMode }) =>
+    themeMode === 'dark' ? '#ffffffcd' : '#000'};
     font-size: 18px;
     padding: 10px 30px;
     font-weight: 600;
-     background-color: ${({ themeMode }) =>
-      themeMode === 'dark' ? '#212020' : '#000'};
+    background-color: ${({ themeMode }) =>
+      themeMode === 'dark' ? '#bbb6b6a2' : '#e8e6e6'};
   }
   `;export const StyledBox = styled(Box)`
   && {

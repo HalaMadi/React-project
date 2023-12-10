@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { LineBreak } from '../../home/components/header/style';
@@ -14,7 +15,8 @@ import {
   AccordionDetails,
   AccordionSummary,
   Grid,
-  Typography
+  Typography,
+  useTheme
 } from '@mui/material';
 import { TestimonialsBox } from '../../home/style';
 import AddIcon from '@mui/icons-material/Add';
@@ -28,14 +30,12 @@ import {
 import { StyledButton, StyledImg } from '../../home/components/projects/style';
 import { useNavigate } from 'react-router-dom';
 const website: React.FC = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const theme = useTheme();
   const navigate = useNavigate();
-
   const handleMoreButtonClick = () => {
     // Navigate to the '/projects' route when the More button is clicked
     navigate('/projects');
   };
-
   return (
     <StyledContainer>
       <StyledTypography variant="h3">
@@ -122,14 +122,14 @@ const website: React.FC = () => {
             FAQs about Branding
           </Typography>
         </Grid>
-        <Grid item xs={8} md={8} lg={8} sx={{ bgcolor: '#f9f9f9' }}>
-          <StyledAccordion>
+        <Grid item xs={8} md={8} lg={8}>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -139,13 +139,13 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -155,13 +155,13 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>{' '}
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -171,13 +171,13 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>{' '}
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -187,13 +187,29 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>{' '}
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                eget.
+              </Typography>
+            </AccordionDetails>
+          </StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
+            <AccordionSummary
+              expandIcon={<AddIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -203,13 +219,13 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>{' '}
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -219,29 +235,13 @@ const website: React.FC = () => {
               </Typography>
             </AccordionDetails>
           </StyledAccordion>{' '}
-          <StyledAccordion>
+          <StyledAccordion themeMode={theme.palette.mode}>
             <AccordionSummary
               expandIcon={<AddIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <AccordionTitle>Accordion 1</AccordionTitle>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </StyledAccordion>{' '}
-          <StyledAccordion>
-            <AccordionSummary
-              expandIcon={<AddIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <AccordionTitle>Accordion 1</AccordionTitle>
+              <AccordionTitle>Is copywriting included in the services you provide?</AccordionTitle>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

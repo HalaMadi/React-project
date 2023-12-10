@@ -10,7 +10,6 @@ export const CenteredBox = styled(Box)`
     margin-bottom: 70px;
   }
 `;
-
 export const StyledFooter__Title = styled(Typography)`
   && {
     align-items: center;
@@ -24,17 +23,16 @@ export const StyledFooter__Title = styled(Typography)`
     }
   }
 `;
-export const StyledFooter__Button = styled(Typography)`
+export const StyledFooter__Button = styled(Typography) <{ themeMode: string }>`
   && {
-    background-color: #000;
-    color: #fff;
+    background-color: ${({ themeMode }) =>
+    themeMode === 'dark' ? '#50505085' : '#090909'};    color: #fff;
     border-radius: 50px;
-    padding: 20px 40px;
+    padding: 16px 30px;
     margin: 20px;
     @media (max-width: 375px) {
       padding: 10px 20px;
-
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 `;

@@ -8,7 +8,6 @@ const ScrollDownButton: React.FC = () => {
       behavior: "smooth",
     });
   };
-
   return (
     <StyledButton onClick={handleClick}>
       Scroll Down

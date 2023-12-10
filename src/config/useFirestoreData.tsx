@@ -17,7 +17,6 @@ const useFirestoreData = () => {
       throw new Error('Unable to fetch data');
     }
   };
-
   return useQuery('firestoreData', fetchFirestoreData);
 };
 

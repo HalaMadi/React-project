@@ -25,7 +25,6 @@ export const StyleTypography = styled(Typography)`
     @media (max-width:375px) {
       font-size: 10px;
       max-width: 100%;
-
     }
   }
 `;

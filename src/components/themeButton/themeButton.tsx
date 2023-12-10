@@ -5,7 +5,6 @@ import { NightModeToggleContainer, StyledIconButton } from './style';
 
 const NightModeToggle = () => {
   const { mode, toggleColorMode } = useThemeContext();
-
   return (
     <NightModeToggleContainer>
       <StyledIconButton

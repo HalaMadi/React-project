@@ -18,10 +18,8 @@ const Menu: React.FC = () => {
   };
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
-
   // State for handling mobile drawer open/close
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -33,7 +31,6 @@ const Menu: React.FC = () => {
       }
       setDrawerOpen(open);
     };
-
   return (
     <CenteredContainer>
       {isMatch ? (
@@ -61,7 +58,6 @@ const Menu: React.FC = () => {
               <Grid item>
                 <Logo />
               </Grid>
-
               {/* StyledTabs */}
               <Grid item>
                 <StyledTabs

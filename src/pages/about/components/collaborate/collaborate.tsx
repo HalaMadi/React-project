@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Business, Chat } from "@mui/icons-material";
-import { GridIcon, GridTypography, StyledBoxTitle, Title, CollaborateGrid } from "./style";
+import { GridIcon, GridTypography, StyledBoxTitle, Title } from "./style";
 import GroupIcon from "@mui/icons-material/Group";
 const Collaborate: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Collaborate: React.FC = () => {
         <Title variant="h2">Why collaborate with me?</Title>
       </StyledBoxTitle>
       <Grid container spacing={4}>
-        <CollaborateGrid item xs={12} sm={4} sx={{ mt: "20px" }}>
+        <Grid item xs={12} sm={4} sx={{ mt: "20px" }}>
           <GridIcon>
             <GroupIcon fontSize="large" />
           </GridIcon>
@@ -20,7 +20,7 @@ const Collaborate: React.FC = () => {
             laborum nam saepe dolore nostrum vitae delectus temporibus tempore
             explicabo nisi?
           </Typography>
-        </CollaborateGrid>
+        </Grid>
         <Grid item xs={12} sm={4}>
           <GridIcon>
             <Business fontSize="large" />

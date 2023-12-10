@@ -1,5 +1,5 @@
 // Footer.jsx
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography, useTheme } from '@mui/material';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import React from 'react';
 import {
@@ -10,11 +10,13 @@ import {
 } from './style';
 
 const Footer: React.FC = () => {
+  const theme = useTheme();
+
   return (
     <>
       <CenteredBox>
         <StyledFooter__Title>Let's talk</StyledFooter__Title>
-        <StyledFooter__Button>
+        <StyledFooter__Button themeMode={theme.palette.mode}>
           hello@joey.co <ArrowOutwardIcon />
         </StyledFooter__Button>
       </CenteredBox>
