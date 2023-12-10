@@ -3,8 +3,8 @@ import { Grid, Typography } from '@mui/material';
 import {
   LineBreak,
   StyledBrief_T,
-  StyledHomeTitle,
-  StyledTypography,
+  Home__Title,
+  Home__Typography,
 } from './style.tsx';
 import ScrollDownButton from '../scrollDown/ScrollDownButton.tsx';
 
@@ -13,10 +13,10 @@ const Header: React.FC = () => {
     < >
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
-          <StyledHomeTitle variant="h1" component="h2">
+          <Home__Title variant="h1" component="h2">
             Websites&
             <LineBreak /> Branding
-          </StyledHomeTitle>
+          </Home__Title>
         </Grid>
         <Grid
           item
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={6} md={6}>
-          <StyledTypography>Let's Talk</StyledTypography>
+          <Home__Typography>Let's Talk</Home__Typography>
           <Typography variant="body1">hello@joey.co</Typography>
         </Grid>
         <Grid item xs={6}md={6} >

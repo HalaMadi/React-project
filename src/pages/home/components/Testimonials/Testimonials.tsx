@@ -1,20 +1,20 @@
 import { Grid } from '@mui/material';
 import React from 'react';
 import {
-  TestimonialsBox,
-  StyledTitle,
-  StyledTypography,
-  StyledBrife
+  Testimonials__Box,
+  Testimonials__Title,
+  Testimonials__Typography,
+  Testimonials__Brife
 } from './style';
 
 const Testimonials: React.FC = () => {
   return (
     <>
-      <TestimonialsBox>
-        <StyledTitle variant="h3">Testimonials</StyledTitle>
+      <Testimonials__Box>
+        <Testimonials__Title variant="h3">Testimonials</Testimonials__Title>
         <Grid container>
           <Grid item xs={12} md={6} lg={8}>
-            <StyledBrife>
+            <Testimonials__Brife>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
               fugiat quo ducimus, dicta nulla nobis labore beatae at! In velit
               ullam ipsa quae veritatis voluptatibus! Cum excepturi ipsa
@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
               cupiditate sed culpa deserunt? Quod, odio accusamus, sequi esse
               incidunt cumque natus voluptate aliquid molestias, officia
               corporis.
-            </StyledBrife>
+            </Testimonials__Brife>
           </Grid>
           <Grid
             item
@@ -35,12 +35,12 @@ const Testimonials: React.FC = () => {
             alignItems="flex-end"
           >
             <div>
-              <StyledTypography>Chirs Ellingoton</StyledTypography>
-              <StyledTypography>Product Lead.Gatha</StyledTypography>
+              <Testimonials__Typography>Chirs Ellingoton</Testimonials__Typography>
+              <Testimonials__Typography>Product Lead.Gatha</Testimonials__Typography>
             </div>
           </Grid>
         </Grid>
-      </TestimonialsBox>
+      </Testimonials__Box>
     </>
   );
 };

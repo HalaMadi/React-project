@@ -1,12 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
 
-export const TestimonialsBox = styled(Box)`
+export const Testimonials__Box = styled(Box)`
   && {
     margin: 100px 0px;
   }
 `;
-export const StyledTitle = styled(Typography)`
+export const Testimonials__Title = styled(Typography)`
   && {
     font-weight: 600;
     margin: 25px 0px;
@@ -15,7 +15,7 @@ export const StyledTitle = styled(Typography)`
     }
   }
 `;
-export const StyledBrife = styled(Typography)`
+export const Testimonials__Brife = styled(Typography)`
   && {
     font-weight: 400;
     font-size: 25px;
@@ -27,7 +27,7 @@ export const StyledBrife = styled(Typography)`
     }
   }
 `;
-export const StyledTypography = styled(Typography)`
+export const Testimonials__Typography = styled(Typography)`
   && {
     font-weight: 600;
     font-size: 25px;

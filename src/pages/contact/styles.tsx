@@ -11,7 +11,7 @@ export const ContactGrid = styled(Grid)`
     margin: 20px 0px;
   }
 `;
-export const StyledTypography = styled(Typography)`
+export const Contact__Typography = styled(Typography)`
   && {
     max-width: 70%;
     text-align: center;
@@ -26,7 +26,7 @@ export const ContactBox = styled(Grid)`
     text-align: center;
   }
 `;
-export const FullWidthTextField = styled(TextField)<{ themeMode: string }>`
+export const Contact__TextField = styled(TextField)<{ themeMode: string }>`
   && {
     width: 40%;
     padding: 8px;
@@ -37,7 +37,7 @@ export const FullWidthTextField = styled(TextField)<{ themeMode: string }>`
     color: ${({ themeMode }) => (themeMode === 'dark' ? '#fff' : 'inherit')};
   }
 `;
-export const SubmitButton = styled(Button)<{ themeMode: string }>`
+export const Contact__SubmitButton = styled(Button)<{ themeMode: string }>`
   && {
     width: 40%;
     border-radius: 30px;
@@ -49,7 +49,7 @@ export const SubmitButton = styled(Button)<{ themeMode: string }>`
       themeMode === 'dark' ? '#ffffff' : '#000000'};
   }
 `;
-export const StyledTextarea = styled(TextareaAutosize)<{ themeMode: string }>`
+export const Contact__Textarea = styled(TextareaAutosize)<{ themeMode: string }>`
   && {
     width: 40%;
     padding: 8px;

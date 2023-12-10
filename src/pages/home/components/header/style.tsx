@@ -1,14 +1,14 @@
 import { Container, Typography } from "@mui/material";
 import styled from "styled-components";
 
-export const StyledContainer = styled(Container)`
+export const Home__headerContainer = styled(Container)`
   && {
     @media (max-width: 375px) {
       width: 375px;
     }
   }
 `;
-export const StyledHomeTitle = styled(Typography)`
+export const Home__Title = styled(Typography)`
   && {
     font-weight: 800;
     font-size: 200px;
@@ -26,7 +26,7 @@ export const StyledHomeTitle = styled(Typography)`
 `;
 export const LineBreak = styled.br`
 `;
-export const StyledTypography = styled(Typography)`
+export const Home__Typography = styled(Typography)`
   && {
     font-size: 30px;
     font-weight: 800;

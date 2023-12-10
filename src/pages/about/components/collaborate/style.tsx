@@ -9,14 +9,14 @@ export const StyledBoxTitle = styled(Box)`
     }
   }
 `;
-export const Title = styled(Typography)`
+export const CollaborateTitle = styled(Typography)`
   && {
     @media (max-width: 375px) {
       font-size: 30px;
     }
   }
 `;
-export const GridTypography = styled(Typography)`
+export const Collaborate__GridTypography = styled(Typography)`
   && {
     padding: 15px 0px;
   }

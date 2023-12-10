@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import styled from "styled-components";
 
-export const StyledTitle = styled(Typography)`
+export const About__HeaderTitle = styled(Typography)`
   && {
     font-size: 150px;
     font-weight: 800;
@@ -13,12 +13,12 @@ export const StyledTitle = styled(Typography)`
     }
   }
 `;
-export const PersonImg = styled(Box)`
+export const About__PersonImg = styled(Box)`
   &&{
     max-width: 100%;
   }
 `;
-export const StyleTypography = styled(Typography)`
+export const About__Typography = styled(Typography)`
   && {
     padding: 10px;
     max-width: 50%;
@@ -28,7 +28,7 @@ export const StyleTypography = styled(Typography)`
     }
   }
 `;
-export const StyledButton = styled(Button)`
+export const About__StyledButton = styled(Button)`
   && {
     background-color: #d4d0d0a0;
     font-size: 20px;

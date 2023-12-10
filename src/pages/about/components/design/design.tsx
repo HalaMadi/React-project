@@ -3,24 +3,24 @@ import React from "react";
 import { LineBreak } from "../../../home/components/header/style";
 import {
   DesignContainer,
-  StyledTitle,
-  StyledTypography,
+  Design__Title,
+  Design__Typography,
   StyledDivider,
-  RhigtGrid,
+  Design__RightGrid,
   ProcessTypography
 } from "./style";
 
 const Design: React.FC = () => {
   return (
     <DesignContainer>
-      <StyledTitle variant="h3">Design Process</StyledTitle>
+      <Design__Title variant="h3">Design Process</Design__Title>
       <Grid container spacing={3} gap={5}>
         <Grid item xs={12}>
-          <StyledTypography>
+          <Design__Typography>
             01-
             <LineBreak />
             Discovery
-          </StyledTypography>
+          </Design__Typography>
           <ProcessTypography variant="body1" >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptates, cum harum! Quidem repellat cum error alias natus rerum
@@ -28,19 +28,19 @@ const Design: React.FC = () => {
             eum excepturi?
           </ProcessTypography>
         </Grid>
-        <RhigtGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <RhigtGrid
+        <Design__RightGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Design__RightGrid
             container
             spacing={3}
             sx={{ width: "50%" }}
           >
             <Grid item xs={12}>
               <StyledDivider />
-              <StyledTypography>
+              <Design__Typography>
                 02-
                 <LineBreak />
                 Strategy
-              </StyledTypography>
+              </Design__Typography>
               <Typography variant="body1">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Tempore impedit eius dignissimos. Dolore, corrupti aliquam est
@@ -48,15 +48,15 @@ const Design: React.FC = () => {
                 optio esse cupiditate modi fuga nostrum aut ratione?{" "}
               </Typography>
             </Grid>
-          </RhigtGrid>
-        </RhigtGrid>
+          </Design__RightGrid>
+        </Design__RightGrid>
         <Grid item xs={12}>
           <StyledDivider />
-          <StyledTypography>
+          <Design__Typography>
             03-
             <LineBreak />
             Discovery
-          </StyledTypography>
+          </Design__Typography>
           <ProcessTypography variant="body1">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptates, cum harum! Quidem repellat cum error alias natus rerum
@@ -64,19 +64,19 @@ const Design: React.FC = () => {
             eum excepturi?
           </ProcessTypography>
         </Grid>
-        <RhigtGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <RhigtGrid
+        <Design__RightGrid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Design__RightGrid
             container
             spacing={3}
             sx={{ width: "50%" }}
           >
             <Grid item xs={12}>
               <StyledDivider />
-              <StyledTypography>
+              <Design__Typography>
                 04-
                 <LineBreak />
                 Design
-              </StyledTypography>
+              </Design__Typography>
               <Typography variant="body1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 laudantium consectetur error sint odio, asperiores aliquam id?
@@ -84,8 +84,8 @@ const Design: React.FC = () => {
                 deleniti nostrum vel libero non.
               </Typography>
             </Grid>
-          </RhigtGrid>
-        </RhigtGrid>
+          </Design__RightGrid>
+        </Design__RightGrid>
       </Grid>
     </DesignContainer>
   );

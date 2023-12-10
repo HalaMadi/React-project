@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
 
-export const Title = styled(Typography)`
+export const Expertise__Title = styled(Typography)`
   && {
     font-weight: bold;
     @media (max-width: 375px) {
@@ -9,7 +9,7 @@ export const Title = styled(Typography)`
     }
   }
 `;
-export const SubTitle = styled(Typography)`
+export const Expertise__SubTitle = styled(Typography)`
   && {
     font-size: 30px;
     font-weight: bolder;
@@ -21,7 +21,7 @@ export const SubTitle = styled(Typography)`
     }
   }
 `;
-export const StyledBox = styled(Box)`
+export const Expertise__StyledBox = styled(Box)`
   && {
     padding: 20px 0px;
     margin: 20px 15px;

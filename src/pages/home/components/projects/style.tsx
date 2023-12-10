@@ -3,14 +3,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 
-export const ProjectTitle = styled(Typography)`
+export const Project__Title = styled(Typography)`
   && {
     font-weight: 800;
     @media (max-width: 375px) {
       font-size: 25px;
     }
   }
-`;export const ProjectSubTitle = styled(Typography)`
+`;export const Project__SubTitle = styled(Typography)`
   && {
     margin: 15px 0px;
     font-size: 18px;
@@ -18,7 +18,7 @@ export const ProjectTitle = styled(Typography)`
     font-size: 12px;
   }}
 `;
-export const StyledButton = styled(Button)`
+export const Project__Button = styled(Button)`
   && {
     background: #f3eeee9e;
     font-size: 15px;
@@ -33,7 +33,7 @@ export const StyledButton = styled(Button)`
     }
   }
 `;
-export const StyledTypography = styled(Typography)`
+export const Project__Typography = styled(Typography)`
   && {
     font-weight: 800;
     padding-top: 20px;

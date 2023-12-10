@@ -1,20 +1,20 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Business, Chat } from "@mui/icons-material";
-import { GridIcon, GridTypography, StyledBoxTitle, Title } from "./style";
+import { GridIcon, Collaborate__GridTypography, StyledBoxTitle, CollaborateTitle } from "./style";
 import GroupIcon from "@mui/icons-material/Group";
 const Collaborate: React.FC = () => {
   return (
     <Container sx={{ mb: "100px" }}>
       <StyledBoxTitle>
-        <Title variant="h2">Why collaborate with me?</Title>
+        <CollaborateTitle variant="h2">Why collaborate with me?</CollaborateTitle>
       </StyledBoxTitle>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={4} sx={{ mt: "20px" }}>
           <GridIcon>
             <GroupIcon fontSize="large" />
           </GridIcon>
-          <GridTypography variant="h6">Client-Centric</GridTypography>
+          <Collaborate__GridTypography variant="h6">Client-Centric</Collaborate__GridTypography>
           <Typography variant="body2">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
             laborum nam saepe dolore nostrum vitae delectus temporibus tempore
@@ -25,7 +25,7 @@ const Collaborate: React.FC = () => {
           <GridIcon>
             <Business fontSize="large" />
           </GridIcon>
-          <GridTypography variant="h6">Tailored Solutions</GridTypography>
+          <Collaborate__GridTypography variant="h6">Tailored Solutions</Collaborate__GridTypography>
           <Typography variant="body2">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
             laborum nam saepe dolore nostrum vitae delectus temporibus tempore
@@ -36,7 +36,7 @@ const Collaborate: React.FC = () => {
           <GridIcon>
             <Chat fontSize="large" />
           </GridIcon>
-          <GridTypography variant="h6">Creative Innovation</GridTypography>
+          <Collaborate__GridTypography variant="h6">Creative Innovation</Collaborate__GridTypography>
           <Typography variant="body2">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
             laborum nam saepe dolore nostrum vitae delectus temporibus tempore

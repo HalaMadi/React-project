@@ -2,11 +2,11 @@ import { Grid, useTheme } from '@mui/material';
 import React from 'react';
 import {
   ContactGrid,
-  StyledTypography,
+  Contact__Typography,
   ContactBox,
-  FullWidthTextField,
-  SubmitButton,
-  StyledTextarea
+  Contact__TextField,
+  Contact__SubmitButton,
+  Contact__Textarea
 } from './styles';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -62,13 +62,13 @@ const Contact: React.FC = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <Grid item xs={12} lg={12}>
-          <StyledTypography variant="h3">
+          <Contact__Typography variant="h3">
             Have a project idea? Let's discuss it together.
-          </StyledTypography>
+          </Contact__Typography>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <FullWidthTextField
+            <Contact__TextField
               placeholder="Name"
               {...register('name')}
               error={!!errors?.name}
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <FullWidthTextField
+            <Contact__TextField
               placeholder="Email Address"
               {...register('email')}
               error={!!errors?.email}
@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <FullWidthTextField
+            <Contact__TextField
               placeholder="Mobile number"
               {...register('mobile')}
               error={!!errors?.mobile}
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <FullWidthTextField
+            <Contact__TextField
               placeholder="Tell us more about your project"
               {...register('hearAbout')}
               error={!!errors?.hearAbout}
@@ -128,23 +128,23 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <StyledTextarea
+            <Contact__Textarea
               placeholder="Tell us more about your project"
               {...register('projectDetails')}
               themeMode={theme.palette.mode}
             />
             {errors.projectDetails && (
-              <StyledTypography color="error" variant="body2">
+              <Contact__Typography color="error" variant="body2">
                 {errors.projectDetails.message}
-              </StyledTypography>
+              </Contact__Typography>
             )}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
-            <SubmitButton themeMode={theme.palette.mode} type="submit">
+            <Contact__SubmitButton themeMode={theme.palette.mode} type="submit">
               Submit
-            </SubmitButton>
+            </Contact__SubmitButton>
           </ContactBox>
         </Grid>
       </ContactGrid>
