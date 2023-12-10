@@ -4,6 +4,12 @@ import { StyledContainer, StyledTypography, StyledLink, StyledButton, StyledBox 
 import { StyledImg } from '../home/components/projects/style';
 import Testimonials from '../home/components/Testimonials/Testimonials';
 import { Title } from '../home/components/expertise/style';
+import pic1 from '../../public/pic1.png';
+import pic2 from '../../public/pic2.png';
+import pic3 from '../../public/pic3.png';
+import pic4 from '../../public/pic4.png';
+import pic5 from '../../public/pic5.png';
+import pic6 from '../../public/pic6.png';
 
 const Projects: React.FC = () => {
   const theme = useTheme();
@@ -28,7 +34,7 @@ const Projects: React.FC = () => {
         {/* Grid-1 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/projects/tansto">
-            <StyledImg component="img" src="src\public\pic1.PNG" />
+            <StyledImg component="img" src={pic1} />
           </StyledLink>
           <StyledTypography>Crtly</StyledTypography>
           <Typography>Mobile App</Typography>
@@ -36,7 +42,7 @@ const Projects: React.FC = () => {
         {/* Grid-2 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/projects/website">
-            <StyledImg component="img" src="src\public\pic2.PNG" />
+            <StyledImg component="img" src={pic2} />
           </StyledLink>
           <StyledTypography>Tansto</StyledTypography>
           <Typography>Web Design</Typography>
@@ -44,7 +50,7 @@ const Projects: React.FC = () => {
         {/* Grid-3 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
-            <StyledImg component="img" src="src\public\pic3.PNG" />
+            <StyledImg component="img" src={pic3} />
           </StyledLink>
           <StyledTypography>Another Project</StyledTypography>
           <Typography>Another Type</Typography>
@@ -52,7 +58,7 @@ const Projects: React.FC = () => {
         {/* Grid-4 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
-            <StyledImg component="img" src="src\public\pic4.PNG" />
+            <StyledImg component="img" src={pic4} />
           </StyledLink>
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
@@ -60,14 +66,14 @@ const Projects: React.FC = () => {
         {/* Grid-5 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
-            <StyledImg component="img" src="src\public\pic5.PNG" />
+            <StyledImg component="img" src={pic5} />
           </StyledLink>
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>
         {/* Grid-6 */}
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg component="img" src="src\public\pic6.PNG" />
+          <StyledImg component="img" src={pic6} />
           <StyledTypography>More Project</StyledTypography>
           <Typography>More Type</Typography>
         </Grid>

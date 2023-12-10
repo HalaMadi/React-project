@@ -9,6 +9,11 @@ import {
   Project__SubTitle
 } from './style';
 import { useNavigate } from 'react-router-dom';
+import pic1 from '../../../../public/pic1.png';
+import pic2 from '../../../../public/pic2.png';
+import pic3 from '../../../../public/pic3.png';
+import pic4 from '../../../../public/pic4.png';
+
 
 const Projects: React.FC = () => {
   const theme = useTheme();
@@ -43,22 +48,22 @@ const Projects: React.FC = () => {
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg component="img" src="src\public\pic1.PNG" />
+          <StyledImg component="img" src={pic1} />
           <Project__Typography>Crtly</Project__Typography>
           <Typography>Mobile App</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg component="img" src="src\public\pic2.PNG" />
+          <StyledImg component="img" src={pic2} />
           <Project__Typography>Tansto</Project__Typography>
           <Typography>Web Design</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg component="img" src="src\public\pic3.PNG" />
+          <StyledImg component="img" src={pic3} />
           <Project__Typography>Another Project</Project__Typography>
           <Typography>Another Type</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          <StyledImg component="img" src="src\public\pic4.PNG" />
+          <StyledImg component="img" src={pic4} />
           <Project__Typography>More Project</Project__Typography>
           <Typography>More Type</Typography>
         </Grid>
