@@ -9,7 +9,7 @@ export const StyledContainer = styled(Container)`
 `;
 export const StyledHomeContainer = styled(Container)`
   && {
-    @media (max-width: 375px) {
+    @media screen and(max-width: 375px) {
       max-width: 100%;
     }
   }

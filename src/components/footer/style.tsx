@@ -15,10 +15,10 @@ export const StyledFooter__Title = styled(Typography)`
     align-items: center;
     font-weight: 800;
     font-size: 150px;
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px){
       font-size: 100px;
     }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
       font-size: 50px;
     }
   }

@@ -26,7 +26,7 @@ export const StyledDivider = styled(Divider)`
   }  
 `; export const Design__RightGrid = styled(Grid)`
   &&{
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
       justify-content: flex-start;
       width: 100%;
     }
@@ -34,7 +34,7 @@ export const StyledDivider = styled(Divider)`
 `; export const ProcessTypography = styled(Typography)`
   &&{
     max-width: 50%;
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
     max-width: 100%;
     }
   }  

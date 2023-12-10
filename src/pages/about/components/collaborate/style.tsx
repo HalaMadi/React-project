@@ -4,14 +4,14 @@ import styled from "styled-components";
 export const StyledBoxTitle = styled(Box)`
   && {
     margin: 50px 0px;
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
       font-size: 10px;
     }
   }
 `;
 export const CollaborateTitle = styled(Typography)`
   && {
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
       font-size: 30px;
     }
   }

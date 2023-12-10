@@ -6,9 +6,10 @@ export const About__HeaderTitle = styled(Typography)`
     font-size: 150px;
     font-weight: 800;
     line-height: 1;
-    @media (max-width: 768px) {
+    @media screen and(max-width: 768px) {
       font-size: 80px;
-    } @media (max-width:375px) {
+    } 
+    @media screen and(max-width:375px) {
       font-size: 40px;
     }
   }
@@ -22,7 +23,7 @@ export const About__Typography = styled(Typography)`
   && {
     padding: 10px;
     max-width: 50%;
-    @media (max-width:375px) {
+    @media screen and(max-width:375px) {
       font-size: 10px;
       max-width: 100%;
     }
@@ -37,7 +38,7 @@ export const About__StyledButton = styled(Button)`
     border-radius: 30px;
     padding: 10px 50px;
     margin-left: 60px;
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px) {
       font-size: 10px;
       padding: 5px 10px;
       margin-left: 20px;
