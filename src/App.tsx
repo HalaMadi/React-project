@@ -12,6 +12,7 @@ import Website from './pages/projects/website';
 import { useThemeContext } from './theme/ThemeContextProvider';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import NightModeToggle from './components/themeButton/themeButton';
+import LanguageSelector from './components/language/langButton';
 
 const App: React.FC = () => {
   const { theme } = useThemeContext();
@@ -19,6 +20,7 @@ const App: React.FC = () => {
     <>
     <ThemeProvider theme={theme}>
     <CssBaseline />
+        <LanguageSelector/>
       <NightModeToggle />
       <Menu />
       <Routes>

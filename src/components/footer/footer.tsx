@@ -8,14 +8,15 @@ import {
   StyledFooter__Title,
   StyledLink
 } from './style';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
   const theme = useTheme();
-
+const {t}=useTranslation();
   return (
     <>
       <CenteredBox>
-        <StyledFooter__Title>Let's talk</StyledFooter__Title>
+        <StyledFooter__Title>{t("Let's_Talk")}</StyledFooter__Title>
         <StyledFooter__Button themeMode={theme.palette.mode}>
           hello@joey.co <ArrowOutwardIcon />
         </StyledFooter__Button>

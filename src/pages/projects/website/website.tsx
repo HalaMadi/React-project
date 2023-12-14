@@ -4,13 +4,13 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { LineBreak } from '../../home/components/header/style';
 import { BoxImg } from '../Tansto/style';
 import { StyledButton, StyledContainer, StyledTypography } from '../style';
-import pic from '../../../public/pic2-2.png';
-import pic1 from '../../../public/pic1.png';
-import pic2 from '../../../public/pic2.png';
-import figmaLogo from '../../../public/figma.png';
-import NotionLogo from '../../../public/Notion-logo.svg.png';
-import SalckLogo from '../../../public/Slack_icon_2019.svg.png';
-import LinearLogo from '../../../public/images.png';
+import pic from '../../../assets/pic2-2.png';
+import pic1 from '../../../assets/pic1.png';
+import pic2 from '../../../assets/pic2.png';
+import figmaLogo from '../../../assets/figma.png';
+import NotionLogo from '../../../assets/Notion-logo.svg.png';
+import SalckLogo from '../../../assets/Slack_icon_2019.svg.png';
+import LinearLogo from '../../../assets/images.png';
 import {
   AccordionDetails,
   AccordionSummary,

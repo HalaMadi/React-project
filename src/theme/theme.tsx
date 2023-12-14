@@ -10,7 +10,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     },
     text: {
       primary: mode === 'light' ? black : '#fff'
-    },
+    }, 
     background: {
       default: mode === 'light' ? '#fff' : black
     },

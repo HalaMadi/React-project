@@ -1,11 +1,11 @@
 import React from 'react';
 import { LineBreak } from '../../home/components/header/style';
-import { StyledContainer, StyledTypography } from '../style';
-import pic from '../../../public/pic2-2.png';
-import pic1 from '../../../public/pic1.png';
-import pic2 from '../../../public/pic2.png';
-import pic5 from '../../../public/pic5-5.png';
-import pic4 from '../../../public/pic4.png';
+import { StyledContainer, StyledTypography, StyledCrafting } from '../style';
+import pic from '../../../assets/pic2-2.png';
+import pic1 from '../../../assets/pic1.png';
+import pic2 from '../../../assets/pic2.png';
+import pic5 from '../../../assets/pic5-5.png';
+import pic4 from '../../../assets/pic4.png';
 import {
   BoxImg,
   Challenge,
@@ -20,10 +20,11 @@ import {
 import { Grid, Stack, Typography } from '@mui/material';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
+import { useTranslation } from 'react-i18next';
 
 
 const Tansto: React.FC = () => {
-
+  const { t } = useTranslation();
   return (
     <StyledContainer>
       <Stack>
@@ -41,13 +42,12 @@ const Tansto: React.FC = () => {
         </Tansto__Breadcrumbs>
       </Stack>
       <StyledTypography variant="h3">
-        Tasto impact -- <LineBreak />a unified visual brand for a well being
-        retreat
+        Tasto_impact--<LineBreak /> {t("Tasto_impact")}
       </StyledTypography>
       <BoxImg component="img" src={pic} />
       <Grid container spacing={3}>
         <Grid item xs={12} md={4} lg={6}>
-          <Challenge variant="h6">Challenge</Challenge>
+          <Challenge variant="h6">{t("Challenges")}</Challenge>
         </Grid>
         <Grid
           item
@@ -59,24 +59,21 @@ const Tansto: React.FC = () => {
           alignItems="flex-end"
         >
           <StyledParagraph>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, id
-            tempore! Modi animi laboriosam deserunt dolore dolorum, porro
-            quaerat debitis illo, quisquam officiis ducimus eveniet fuga, velit
-            reprehenderit saepe ipsam.
+            {t("StyledParagraph")}
           </StyledParagraph>
         </Grid>
         <Grid item xs={12} md={6} lg={6}>
           <BoxImg component="img" src={pic1} />
           <StyledTypography>Tansto</StyledTypography>
-          <Typography>Web Design</Typography>
+          <Typography>{t("Web_Design")}</Typography>
         </Grid>
         <Grid item xs={12} md={6} lg={6}>
           <BoxImg component="img" src={pic2} />
           <StyledTypography>Tansto</StyledTypography>
-          <Typography>Web Design</Typography>
+          <Typography>{t("Web_Design")}</Typography>
         </Grid>
         <Grid item xs={12} md={12} lg={6}>
-          <Challenge>A brand that fits wih the company culture</Challenge>
+          <Challenge>{t("Challenge")}</Challenge>
         </Grid>
         <Grid
           item
@@ -89,16 +86,10 @@ const Tansto: React.FC = () => {
           gap={3}
         >
           <Typography sx={{ fontSize: '15px' }}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, id
-            tempore! Modi animi laboriosam deserunt dolore dolorum, porro
-            quaerat debitis illo, quisquam officiis ducimus eveniet fuga, velit
-            reprehenderit saepe ipsam.
+            {t("Tansto_Typography1")}
           </Typography>
           <Typography sx={{ fontSize: '15px' }}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, id
-            tempore! Modi animi laboriosam deserunt dolore dolorum, porro
-            quaerat debitis illo, quisquam officiis ducimus eveniet fuga, velit
-            reprehenderit saepe ipsam.
+            {t("Tansto_Typography2")}
           </Typography>
         </Grid>
         <BoxImg component="img" src={pic5} />
@@ -106,35 +97,28 @@ const Tansto: React.FC = () => {
       </Grid>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6} lg={6}>
-          <StyledTypography variant="h5">
-            Crafting a cohesive and consistent brand esperience
-          </StyledTypography>
+          <StyledCrafting variant="h5">
+            {t("StyledCrafting")}
+          </StyledCrafting>
         </Grid>
         <Grid item xs={12} md={12} lg={12} container>
           <StyledParagraph2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-            molestias error magnam expedita aspernatur voluptate quis, nam amet
-            ea cupiditate.
+            {t("Tansto_Typography1")}
           </StyledParagraph2>
         </Grid>
         <Grid item xs={12} md={12} lg={12} container>
           <StyledParagraph2>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-            pariatur laboriosam error quia laborum, sunt nesciunt dolores, ipsam
-            exercitationem vitae alias est? Quis nisi veniam minima. Itaque sit
-            mollitia laboriosam!
+            {t("Tansto_Typography2")}
           </StyledParagraph2>
         </Grid>
         <Grid item xs={12} md={12} lg={12} container>
           <StyledParagraph2>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vel
-            aut perspiciatis veritatis magni adipisci unde dolorem illo veniam
-            sunt?
+            {t("StyledParagraph2")}
           </StyledParagraph2>
         </Grid>
         <Grid container>
           <Projects variant="h3" marginTop={10}>
-            Next Projects
+            {t("Next_Projects")}
           </Projects>
           <Grid item display="flex" gap={6}>
             <NextGrid item xs={12} display="flex">

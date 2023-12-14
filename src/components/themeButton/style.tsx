@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const NightModeToggleContainer = styled(Box)`
   align-Items: 'center';
-  display: 'flex';
+  display: inline;
   justify-Content: 'center';
   color: 'text.primary';
   border-Color: 'text.primary';

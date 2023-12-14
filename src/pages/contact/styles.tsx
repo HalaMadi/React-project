@@ -17,12 +17,12 @@ export const Contact__Typography = styled(Typography)`
     text-align: center;
     margin: auto;
     font-weight: 600;
-    padding: 20px;
+    padding-top: 10px;
   }
 `;
 export const ContactBox = styled(Grid)`
   && {
-    padding: 8px;
+    padding: 4px;
     text-align: center;
   }
 `;

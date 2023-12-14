@@ -13,7 +13,17 @@ export const StyledContainer = styled(Container)`
     }
   }
 `;
-export const StyledTypography = styled(Typography)`
+export const StyledCrafting = styled(Typography)`
+  && {
+    font-weight: 600;
+    margin-top: 50px;
+    font-size:35px;
+    text-decoration: none;
+    @media (max-width: 375px) {
+      font-size: 20px;
+    }
+  }
+`; export const StyledTypography = styled(Typography)`
   && {
     font-weight: 600;
     margin-top: 0px;
@@ -29,7 +39,7 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
-export const StyledButton = styled(Button)<{ themeMode: string }>`
+export const StyledButton = styled(Button) <{ themeMode: string }>`
   && {
     border-radius: 30px;
     color:${({ themeMode }) =>
@@ -38,9 +48,9 @@ export const StyledButton = styled(Button)<{ themeMode: string }>`
     padding: 10px 30px;
     font-weight: 600;
     background-color: ${({ themeMode }) =>
-      themeMode === 'dark' ? '#bbb6b6a2' : '#e8e6e6'};
+    themeMode === 'dark' ? '#bbb6b6a2' : '#e8e6e6'};
   }
-  `;export const StyledBox = styled(Box)`
+  `; export const StyledBox = styled(Box)`
   && {
   display: flex;
   justify-content: center;

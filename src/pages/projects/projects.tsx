@@ -4,20 +4,22 @@ import { StyledContainer, StyledTypography, StyledLink, StyledButton, StyledBox 
 import { StyledImg } from '../home/components/projects/style';
 import Testimonials from '../home/components/Testimonials/Testimonials';
 import { Title } from '../home/components/expertise/style';
-import pic1 from '../../public/pic1.png';
-import pic2 from '../../public/pic2.png';
-import pic3 from '../../public/pic3.png';
-import pic4 from '../../public/pic4.png';
-import pic5 from '../../public/pic5.png';
-import pic6 from '../../public/pic6.png';
+import pic1 from '../../assets/pic1.png';
+import pic2 from '../../assets/pic2.png';
+import pic3 from '../../assets/pic3.png';
+import pic4 from '../../assets/pic4.png';
+import pic5 from '../../assets/pic5.png';
+import pic6 from '../../assets/pic6.png';
+import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   return (
     <StyledContainer>
       <Grid container spacing={3}>
         <Grid xs={12} sm={6} md={6}>
-          <Title variant="h3">Projects</Title>
+          <Title variant="h3">{t("Project__Title")}</Title>
         </Grid>
         <Grid
           item
@@ -28,8 +30,7 @@ const Projects: React.FC = () => {
           justifyContent="flex-end"
           alignItems="flex-end"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Necessitatibus praesentium eaque voluptate ducimus totam sapiente.
+          <Typography>{t("Projects_Typography")} </Typography>
         </Grid>
         {/* Grid-1 */}
         <Grid item xs={12} sm={6} md={6}>
@@ -37,7 +38,7 @@ const Projects: React.FC = () => {
             <StyledImg component="img" src={pic1} />
           </StyledLink>
           <StyledTypography>Crtly</StyledTypography>
-          <Typography>Mobile App</Typography>
+          <Typography>{t("Mobile_App")}</Typography>
         </Grid>
         {/* Grid-2 */}
         <Grid item xs={12} sm={6} md={6}>
@@ -45,42 +46,42 @@ const Projects: React.FC = () => {
             <StyledImg component="img" src={pic2} />
           </StyledLink>
           <StyledTypography>Tansto</StyledTypography>
-          <Typography>Web Design</Typography>
+          <Typography>{t("Web_Design")}</Typography>
         </Grid>
         {/* Grid-3 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
             <StyledImg component="img" src={pic3} />
           </StyledLink>
-          <StyledTypography>Another Project</StyledTypography>
-          <Typography>Another Type</Typography>
+          <StyledTypography>Senta</StyledTypography>
+          <Typography>{t("Another_Project")}</Typography>
         </Grid>
         {/* Grid-4 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
             <StyledImg component="img" src={pic4} />
           </StyledLink>
-          <StyledTypography>More Project</StyledTypography>
-          <Typography>More Type</Typography>
+          <StyledTypography>Crint</StyledTypography>
+          <Typography>{t("Mobile_App")}</Typography>
         </Grid>
         {/* Grid-5 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledLink to="/tansto">
             <StyledImg component="img" src={pic5} />
           </StyledLink>
-          <StyledTypography>More Project</StyledTypography>
-          <Typography>More Type</Typography>
+          <StyledTypography>Spanty</StyledTypography>
+          <Typography>{t("Branding")}</Typography>
         </Grid>
         {/* Grid-6 */}
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic6} />
-          <StyledTypography>More Project</StyledTypography>
-          <Typography>More Type</Typography>
+          <StyledTypography>Spanty</StyledTypography>
+          <Typography>{t("Website_Title1")}</Typography>
         </Grid>
       </Grid>
       <StyledBox>
         <StyledButton themeMode={theme.palette.mode}
-        >Load More</StyledButton>
+        >{t("Load_More")}</StyledButton>
       </StyledBox>
       <Testimonials />
     </StyledContainer>

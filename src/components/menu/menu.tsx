@@ -10,6 +10,7 @@ import {
 } from './style';
 import DrawerComp from '../drawer';
 import Logo from '../logo';
+import { useTranslation } from 'react-i18next';
 
 const Menu: React.FC = () => {
   const [value, setValue] = useState(0);
@@ -30,6 +31,7 @@ const Menu: React.FC = () => {
       }
       setDrawerOpen(open);
     };
+    const {t}=useTranslation();
   return (
     <CenteredContainer>
       {isMatch ? (
@@ -65,22 +67,22 @@ const Menu: React.FC = () => {
                   centered
                   themeMode={theme.palette.mode}
                 >
-                  <StyledTab label={<StyledLink to="/">Home</StyledLink>} />
+                  <StyledTab label={<StyledLink to="/">{t("Home")}</StyledLink>} />
                   <StyledTab
                     label={
                       <>
                         <StyledLink to="/projects">
-                          Projects
-                          <ProjectIndicator>36</ProjectIndicator>
+                            {t("Project__Title")}
+                            <ProjectIndicator>{t("ProjectIndicator")}</ProjectIndicator>
                         </StyledLink>
                       </>
                     }
                   />
                   <StyledTab
-                    label={<StyledLink to="/about">About</StyledLink>}
+                    label={<StyledLink to="/about">{t("About")}</StyledLink>}
                   />
                   <StyledTab
-                    label={<StyledLink to="/contact">Contact</StyledLink>}
+                    label={<StyledLink to="/contact">{t("Contact")}</StyledLink>}
                   />
                 </StyledTabs>
               </Grid>

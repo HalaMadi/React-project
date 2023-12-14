@@ -5,8 +5,10 @@ import { BoxDesign, StyledContainer, StyledHomeContainer } from './style';
 import Expertise from './components/expertise';
 import Testimonials from './components/Testimonials';
 import { useTheme } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 const Home: React.FC = () => {
   const theme = useTheme();
+  const {t}=useTranslation();
   return (
     <>
       <StyledHomeContainer>
@@ -18,7 +20,7 @@ const Home: React.FC = () => {
       </StyledHomeContainer>
       <BoxDesign themeMode={theme.palette.mode}
         sx={{ textAlign: 'center', mt: 5 }}>
-        design for digital exper
+        {t("digital_expertise")}
       </BoxDesign>
       <StyledHomeContainer>
         <Testimonials />

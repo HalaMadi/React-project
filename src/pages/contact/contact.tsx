@@ -15,17 +15,26 @@ import * as yup from 'yup';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../config/firebase';
 import useFirestoreData from '../../config/useFirestoreData';
+import { useTranslation } from 'react-i18next';
 // Validation using yup
-const schema = yup.object().shape({
-  name: yup.string().required('Name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
-  mobile: yup.string().required('Mobile number is required'),
-  hearAbout: yup.string(),
-  projectDetails: yup.string().required('Project details are required')
-});
+// const schema = yup.object().shape({
+//   name: yup.string().required(useTranslation().t('Name is required')),
+//   email: yup.string().email('Invalid email').required('Email is required'),
+//   mobile: yup.string().required('Mobile number is required'),
+//   hearAbout: yup.string().required('This field are required'),
+//   projectDetails: yup.string().required('Project details are required')
+// });
 
 const Contact: React.FC = () => {
   const theme = useTheme();
+  const {t}=useTranslation();
+  const schema = yup.object().shape({
+    name: yup.string().required(useTranslation().t('Name_is_required')),
+    email: yup.string().email('Invalid email').required(useTranslation().t('Email_is_required')),
+    mobile: yup.string().required(useTranslation().t('Mobile_number_is_required')),
+    hearAbout: yup.string().required(useTranslation().t('This_field_is_required')),
+    projectDetails: yup.string().required(useTranslation().t('Project_details_are_required'))
+  });
   const {
     register,
     handleSubmit,
@@ -63,73 +72,81 @@ const Contact: React.FC = () => {
       >
         <Grid item xs={12} lg={12}>
           <Contact__Typography variant="h3">
-            Have a project idea? Let's discuss it together.
+            {t("Contact__Typography")}
           </Contact__Typography>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
             <Contact__TextField
-              placeholder="Name"
+              placeholder={t("Name")}
               {...register('name')}
-              error={!!errors?.name}
-              helperText={errors.name?.message}
               variant="standard"
               InputProps={{
                 disableUnderline: true
               }}
               themeMode={theme.palette.mode}
             />
+            {errors.name && (
+              <Contact__Typography color="error" variant="body2">
+                {errors.name.message}
+              </Contact__Typography>)}  
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
             <Contact__TextField
-              placeholder="Email Address"
+              placeholder={t("Email_Address")}
               {...register('email')}
-              error={!!errors?.email}
-              helperText={errors.email?.message}
               variant="standard"
               InputProps={{
                 disableUnderline: true
               }}
               themeMode={theme.palette.mode}
             />
+            {errors.email  && (
+              <Contact__Typography color="error" variant="body2">
+                {errors.email.message}
+              </Contact__Typography>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
             <Contact__TextField
-              placeholder="Mobile number"
+              placeholder={t("Mobile_number")}
               {...register('mobile')}
-              error={!!errors?.mobile}
-              helperText={errors.mobile?.message}
               variant="standard"
               InputProps={{
                 disableUnderline: true
               }}
               themeMode={theme.palette.mode}
             />
+            {errors.mobile && (
+              <Contact__Typography color="error" variant="body2">
+                {errors.mobile.message}
+              </Contact__Typography>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
             <Contact__TextField
-              placeholder="How do you hear about us?"
+              placeholder={t("hearAbout")}
               {...register('hearAbout')}
-              error={!!errors?.hearAbout}
-              helperText={errors.hearAbout?.message}
               variant="standard"
               InputProps={{
                 disableUnderline: true
               }}
               themeMode={theme.palette.mode}
             />
+            {errors.hearAbout && (
+              <Contact__Typography color="error" variant="body2">
+                {errors.hearAbout.message}
+              </Contact__Typography>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
           <ContactBox>
             <Contact__Textarea
-              placeholder="Tell us more about your project"
+              placeholder={t("projectDetails" )}
               {...register('projectDetails')}
               themeMode={theme.palette.mode}
             />
@@ -143,7 +160,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <Contact__SubmitButton themeMode={theme.palette.mode} type="submit">
-              Submit
+              {t("Submit")}
             </Contact__SubmitButton>
           </ContactBox>
         </Grid>

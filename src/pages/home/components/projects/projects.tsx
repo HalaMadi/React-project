@@ -9,10 +9,11 @@ import {
   Project__SubTitle
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import pic1 from '../../../../public/pic1.png';
-import pic2 from '../../../../public/pic2.png';
-import pic3 from '../../../../public/pic3.png';
-import pic4 from '../../../../public/pic4.png';
+import pic1 from '../../../../assets/pic1.png';
+import pic2 from '../../../../assets/pic2.png';
+import pic3 from '../../../../assets/pic3.png';
+import pic4 from '../../../../assets/pic4.png';
+import { useTranslation } from 'react-i18next';
 
 
 const Projects: React.FC = () => {
@@ -21,15 +22,14 @@ const Projects: React.FC = () => {
   const handleMoreButtonClick = () => {
     navigate('/projects');
   };
+  const { t } = useTranslation();
   return (
     <>
-      <Project__Title variant="h3">Projects</Project__Title>
+      <Project__Title variant="h3">{t('Project__Title')}</Project__Title>
       <Grid container>
         <Grid item xs={12} sm={6} md={6}>
           <Project__SubTitle>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
-            voluptatem mollitia illum. Facere dolor quas incidunt, eligendi
-            temporibus,
+            {t('Project__SubTitle')}
           </Project__SubTitle>
         </Grid>
         <Grid
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
           alignItems="flex-end"
         >
           <Project__Button onClick={handleMoreButtonClick} themeMode={theme.palette.mode}>
-            More <ArrowForwardIcon />
+            {t('Project__Button')} <ArrowForwardIcon />
           </Project__Button>
         </Grid>
       </Grid>
@@ -50,22 +50,22 @@ const Projects: React.FC = () => {
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic1} />
           <Project__Typography>Crtly</Project__Typography>
-          <Typography>Mobile App</Typography>
+          <Typography>{t('Mobile_App')}</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic2} />
           <Project__Typography>Tansto</Project__Typography>
-          <Typography>Web Design</Typography>
+          <Typography>{t('Web_Design')}</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic3} />
-          <Project__Typography>Another Project</Project__Typography>
-          <Typography>Another Type</Typography>
+          <Project__Typography>senta</Project__Typography>
+          <Typography>{t('Another_Project')}</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic4} />
-          <Project__Typography>More Project</Project__Typography>
-          <Typography>More Type</Typography>
+          <Project__Typography>Crint</Project__Typography>
+          <Typography>{t('Mobile_App')}</Typography>
         </Grid>
       </Grid>
     </>
