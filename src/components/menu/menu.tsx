@@ -6,7 +6,7 @@ import {
   StyledLink,
   CenteredContainer,
   StyledMenuIcon,
-  ProjectIndicator 
+  ProjectIndicator
 } from './style';
 import DrawerComp from '../drawer';
 import Logo from '../logo';
@@ -31,7 +31,9 @@ const Menu: React.FC = () => {
       }
       setDrawerOpen(open);
     };
-    const {t}=useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
   return (
     <CenteredContainer>
       {isMatch ? (
@@ -67,21 +69,28 @@ const Menu: React.FC = () => {
                   centered
                   themeMode={theme.palette.mode}
                 >
-                  <StyledTab label={<StyledLink to="/">{t("Home")}</StyledLink>} />
                   <StyledTab
+                    dir={isRtl ? 'rtl' : 'ltr'}
+                    label={<StyledLink to="/">
+                      {t("Home")}
+                    </StyledLink>} />
+                  <StyledTab
+                    dir={isRtl ? 'rtl' : 'ltr'}
                     label={
                       <>
                         <StyledLink to="/projects">
-                            {t("Project__Title")}
-                            <ProjectIndicator>{t("ProjectIndicator")}</ProjectIndicator>
+                          {t("Project__Title")}
+                          <ProjectIndicator>{t("ProjectIndicator")}</ProjectIndicator>
                         </StyledLink>
                       </>
                     }
                   />
                   <StyledTab
+                    dir={isRtl ? 'rtl' : 'ltr'}
                     label={<StyledLink to="/about">{t("About")}</StyledLink>}
                   />
                   <StyledTab
+                    dir={isRtl ? 'rtl' : 'ltr'}
                     label={<StyledLink to="/contact">{t("Contact")}</StyledLink>}
                   />
                 </StyledTabs>

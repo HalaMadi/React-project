@@ -18,6 +18,9 @@ export const Contact__Typography = styled(Typography)`
     margin: auto;
     font-weight: 600;
     padding-top: 10px;
+    &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
   }
 `;
 export const ContactBox = styled(Grid)`

@@ -10,12 +10,14 @@ import ScrollDownButton from '../scrollDown/ScrollDownButton.tsx';
 import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
-  const {t}=useTranslation();
+  const { t, i18n }=useTranslation();
+  const currentLanguage = i18n.language; 
+  const isRtl = currentLanguage === 'ar'; 
   return (
     < >
       <Grid container spacing={2}>
-        <Grid item xs={12} lg={6}>
-          <Home__Title component="h2">
+        <Grid item xs={12} lg={isRtl ? 8 : 6}>
+          <Home__Title dir={isRtl ? 'rtl' : 'ltr'} component="h2">
             {t('Website_Title1')}
             <LineBreak />{t('Website_Title')}
           </Home__Title>
@@ -23,7 +25,7 @@ const Header: React.FC = () => {
         <Grid
           item
           xs={12}
-          lg={6}
+          lg={isRtl ? 4 : 6}
           container
           alignItems="flex-end"
           justifyContent="flex-end"
@@ -33,11 +35,11 @@ const Header: React.FC = () => {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={6} md={6}>
-          <Home__Typography>{t("Let's_Talk")}</Home__Typography>
+          <Home__Typography dir={isRtl ? 'rtl' : 'ltr'}>{t("Let's_Talk")}</Home__Typography>
           <Typography variant="body1">hello@joey.co</Typography>
         </Grid>
         <Grid item xs={6}md={6} >
-          <StyledBrief_T>
+          <StyledBrief_T dir={isRtl ? 'rtl' : 'ltr'} >
             {t('Brief')}
           </StyledBrief_T>
         </Grid>

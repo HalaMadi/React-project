@@ -22,13 +22,21 @@ const Projects: React.FC = () => {
   const handleMoreButtonClick = () => {
     navigate('/projects');
   };
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
   return (
     <>
-      <Project__Title variant="h3">{t('Project__Title')}</Project__Title>
+      <Project__Title
+        variant="h3"
+        dir={isRtl ? 'rtl' : 'ltr'}>
+        {t('Project__Title')}
+      </Project__Title>
       <Grid container>
         <Grid item xs={12} sm={6} md={6}>
-          <Project__SubTitle>
+          <Project__SubTitle
+            dir={isRtl ? 'rtl' : 'ltr'}
+          >
             {t('Project__SubTitle')}
           </Project__SubTitle>
         </Grid>
@@ -41,7 +49,10 @@ const Projects: React.FC = () => {
           justifyContent="flex-end"
           alignItems="flex-end"
         >
-          <Project__Button onClick={handleMoreButtonClick} themeMode={theme.palette.mode}>
+          <Project__Button
+            dir={isRtl ? 'rtl' : 'ltr'}
+            onClick={handleMoreButtonClick}
+            themeMode={theme.palette.mode}>
             {t('Project__Button')} <ArrowForwardIcon />
           </Project__Button>
         </Grid>
@@ -50,7 +61,7 @@ const Projects: React.FC = () => {
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic1} />
           <Project__Typography>Crtly</Project__Typography>
-          <Typography>{t('Mobile_App')}</Typography>
+          <Typography >{t('Mobile_App')}</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <StyledImg component="img" src={pic2} />

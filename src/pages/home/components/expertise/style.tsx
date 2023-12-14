@@ -4,6 +4,9 @@ import styled from 'styled-components';
 export const Title = styled(Typography)`
   && {
     font-weight: bold;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 375px) {
       font-size: 25px;
     }
@@ -13,6 +16,9 @@ export const SubTitle = styled(Typography)`
   && {
     font-size: 30px;
     font-weight: bolder;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 600px) {
       font-size: 20px;
     }

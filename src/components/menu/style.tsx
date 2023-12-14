@@ -35,12 +35,16 @@ export const StyledTab = styled(Tab)`
   && {
     border-radius: 40px;
     margin: 2px;
+    
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
     &.Mui-selected {
       background-color: #fff;
       color: #000;
+    }
+    &[dir='rtl']{
+      font-family: 'Amiri', serif;
     }
   }
 `;

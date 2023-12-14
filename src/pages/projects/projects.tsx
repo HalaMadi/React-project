@@ -14,12 +14,14 @@ import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
-  return (
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
+    return (
     <StyledContainer>
       <Grid container spacing={3}>
         <Grid xs={12} sm={6} md={6}>
-          <Title variant="h3">{t("Project__Title")}</Title>
+          <Title dir={isRtl ? 'rtl' : 'ltr'} variant="h3">{t("Project__Title")}</Title>
         </Grid>
         <Grid
           item

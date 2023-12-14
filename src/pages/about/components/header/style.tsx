@@ -6,6 +6,9 @@ export const About__HeaderTitle = styled(Typography)`
     font-size: 150px;
     font-weight: 800;
     line-height: 1;
+        &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     @media (max-width: 768px) {
       font-size: 80px;
     } 
@@ -37,7 +40,8 @@ export const About__StyledButton = styled(Button)`
     color: #000;
     border-radius: 30px;
     padding: 10px 50px;
-    margin-left: 60px;
+    margin-left:30px;
+
     @media (max-width: 375px) {
       font-size: 10px;
       padding: 5px 10px;

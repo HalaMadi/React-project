@@ -12,11 +12,13 @@ import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
   const theme = useTheme();
-const {t}=useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
   return (
     <>
       <CenteredBox>
-        <StyledFooter__Title>{t("Let's_Talk")}</StyledFooter__Title>
+        <StyledFooter__Title dir={isRtl ? 'rtl' : 'ltr'} >{t("Let's_Talk")}</StyledFooter__Title>
         <StyledFooter__Button themeMode={theme.palette.mode}>
           hello@joey.co <ArrowOutwardIcon />
         </StyledFooter__Button>

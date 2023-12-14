@@ -6,6 +6,9 @@ import styled from "styled-components";
 export const Project__Title = styled(Typography)`
   && {
     font-weight: 800;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 375px) {
       font-size: 25px;
     }
@@ -14,6 +17,9 @@ export const Project__Title = styled(Typography)`
   && {
     margin: 15px 0px;
     font-size: 18px;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
   @media (max-width: 768px) {
     font-size: 12px;
   }}
@@ -28,6 +34,9 @@ export const Project__Button = styled(Button) <{ themeMode: string }>`
     themeMode === 'dark' ? '#c5c4c4' : '#000'};
     border-radius: 30px;
     gap: 5px;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 375px) {
       font-size: 12px;
       margin-top: 0;
@@ -38,6 +47,9 @@ export const Project__Typography = styled(Typography)`
   && {
     font-weight: 800;
     padding-top: 20px;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
   }
 `;
 export const StyledImg = styled(Box)`
@@ -45,6 +57,9 @@ export const StyledImg = styled(Box)`
     margin-top: 20px;
     border-radius: 30px;
     width: 100%;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 375px) {
     }
   }

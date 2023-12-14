@@ -14,6 +14,9 @@ export const StyledButton = styled(Button) <{ themeMode: string }>`
     font-weight: bold;
     margin: 25px 90px;
     font-family: 'Varela Round', sans-serif;
+    &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     @media (max-width: 768px) {
       font-size: 14px;
       padding: 15px 10px;

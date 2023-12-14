@@ -8,7 +8,9 @@ import { useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 const Home: React.FC = () => {
   const theme = useTheme();
-  const {t}=useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar'; 
   return (
     <>
       <StyledHomeContainer>
@@ -18,7 +20,7 @@ const Home: React.FC = () => {
         </StyledContainer>
         <Expertise />
       </StyledHomeContainer>
-      <BoxDesign themeMode={theme.palette.mode}
+      <BoxDesign dir={isRtl ? 'rtl' : 'ltr'} themeMode={theme.palette.mode}
         sx={{ textAlign: 'center', mt: 5 }}>
         {t("digital_expertise")}
       </BoxDesign>

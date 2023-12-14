@@ -6,6 +6,9 @@ export const Design__Title = styled(Typography)`
   && {
     font-weight: bold;
     padding: 10px 0px;
+        &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
   }
 `;
 export const Design__Typography = styled(Typography)`
@@ -13,6 +16,9 @@ export const Design__Typography = styled(Typography)`
       font-weight: bold;
       padding: 10px 0px;
       font-size: 25px;
+          &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     }
 `;
 export const DesignContainer = styled(Container)`

@@ -27,7 +27,9 @@ import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
   const theme = useTheme();
-  const {t}=useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
   const schema = yup.object().shape({
     name: yup.string().required(useTranslation().t('Name_is_required')),
     email: yup.string().email('Invalid email').required(useTranslation().t('Email_is_required')),
@@ -71,7 +73,7 @@ const Contact: React.FC = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <Grid item xs={12} lg={12}>
-          <Contact__Typography variant="h3">
+          <Contact__Typography dir={isRtl ? 'rtl' : 'ltr'} variant="h3">
             {t("Contact__Typography")}
           </Contact__Typography>
         </Grid>
@@ -89,7 +91,7 @@ const Contact: React.FC = () => {
             {errors.name && (
               <Contact__Typography color="error" variant="body2">
                 {errors.name.message}
-              </Contact__Typography>)}  
+              </Contact__Typography>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
@@ -103,7 +105,7 @@ const Contact: React.FC = () => {
               }}
               themeMode={theme.palette.mode}
             />
-            {errors.email  && (
+            {errors.email && (
               <Contact__Typography color="error" variant="body2">
                 {errors.email.message}
               </Contact__Typography>)}
@@ -146,7 +148,7 @@ const Contact: React.FC = () => {
         <Grid item xs={12}>
           <ContactBox>
             <Contact__Textarea
-              placeholder={t("projectDetails" )}
+              placeholder={t("projectDetails")}
               {...register('projectDetails')}
               themeMode={theme.palette.mode}
             />

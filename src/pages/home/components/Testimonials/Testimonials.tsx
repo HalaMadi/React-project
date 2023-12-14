@@ -9,11 +9,12 @@ import {
 import { useTranslation } from 'react-i18next';
 
 const Testimonials: React.FC = () => {
-  const { t } = useTranslation();
-  return (
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar'; return (
     <>
       <Testimonials__Box>
-        <Testimonials__Title variant="h3">{t("Testimonials__Title")}</Testimonials__Title>
+        <Testimonials__Title dir={isRtl ? 'rtl' : 'ltr'} variant="h3">{t("Testimonials__Title")}</Testimonials__Title>
         <Grid container>
           <Grid item xs={12} md={6} lg={8}>
             <Testimonials__Brife>

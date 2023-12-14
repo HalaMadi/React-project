@@ -10,9 +10,11 @@ const ScrollDownButton: React.FC = () => {
     });
   };
   const theme=useTheme();
-  const {t}=useTranslation();
-  return (
-    <StyledButton onClick={handleClick} themeMode={theme.palette.mode}>
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
+    return (
+    <StyledButton dir={isRtl ? 'rtl' : 'ltr'} onClick={handleClick} themeMode={theme.palette.mode}>
       {t('Scroll_Down')}
       <ArrowIcon />
     </StyledButton>

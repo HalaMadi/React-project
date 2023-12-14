@@ -15,6 +15,9 @@ export const StyledFooter__Title = styled(Typography)`
     align-items: center;
     font-weight: 800;
     font-size: 150px;
+    &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     @media screen and (max-width: 768px){
       font-size: 100px;
     }

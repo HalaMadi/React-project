@@ -10,6 +10,9 @@ export const Testimonials__Title = styled(Typography)`
   && {
     font-weight: 600;
     margin: 25px 0px;
+    &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     @media (max-width: 375px) {
       font-size: 30px;
     }

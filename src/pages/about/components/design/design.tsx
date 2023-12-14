@@ -12,13 +12,15 @@ import {
 import { useTranslation } from "react-i18next";
 
 const Design: React.FC = () => {
-  const { t } = useTranslation();
-  return (
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar';
+    return (
     <DesignContainer>
-      <Design__Title variant="h3">{t("Design_Process")}</Design__Title>
+        <Design__Title dir={isRtl ? 'rtl' : 'ltr'}  variant="h3">{t("Design_Process")}</Design__Title>
       <Grid container spacing={3} gap={5}>
         <Grid item xs={12}>
-          <Design__Typography>
+            <Design__Typography dir={isRtl ? 'rtl' : 'ltr'}>
             {t("01-")}
             <LineBreak />
             {t("Discovery")}
@@ -35,7 +37,7 @@ const Design: React.FC = () => {
           >
             <Grid item xs={12}>
               <StyledDivider />
-              <Design__Typography>
+                <Design__Typography dir={isRtl ? 'rtl' : 'ltr'}>
                 {t("02-")}
                 <LineBreak />
                 {t("Strategy")}
@@ -48,7 +50,7 @@ const Design: React.FC = () => {
         </Design__RightGrid>
         <Grid item xs={12}>
           <StyledDivider />
-          <Design__Typography>
+            <Design__Typography dir={isRtl ? 'rtl' : 'ltr'}>
             {t("03-")}
             <LineBreak />
             {t("Design")}
@@ -65,7 +67,7 @@ const Design: React.FC = () => {
           >
             <Grid item xs={12}>
               <StyledDivider />
-              <Design__Typography>
+                <Design__Typography dir={isRtl ? 'rtl' : 'ltr'}>
                 {t("04-")}
                 <LineBreak />
                 {t("Implementation")}

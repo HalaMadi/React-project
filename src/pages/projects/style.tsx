@@ -7,6 +7,9 @@ export const StyledContainer = styled(Container)`
     padding: 60px;
     margin-top: 40px;
     align-items: center;
+      &[dir='rtl']{
+      font-family: 'Amiri', serif;
+    }
     @media (max-width: 375px) {
       margin: 0;
       padding: 30px;

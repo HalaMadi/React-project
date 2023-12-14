@@ -31,6 +31,9 @@ export const BoxDesign = styled(Box) <{ themeMode: string }>`
     themeMode === 'dark' ? '#181818' : '#000'};    color: #fff;
     margin-top: 50px;
     font-size: 110px;
+      &[dir='rtl'] {
+      font-family: 'Amiri', serif;
+  }
     @media (max-width: 768px) {
       font-size: 70px;
     }
