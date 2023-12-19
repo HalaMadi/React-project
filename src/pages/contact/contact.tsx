@@ -6,24 +6,17 @@ import {
   ContactBox,
   Contact__TextField,
   Contact__SubmitButton,
-  Contact__Textarea
+  Contact__Textarea,
+  Error
 } from './styles';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../config/firebase';
 import useFirestoreData from '../../config/useFirestoreData';
 import { useTranslation } from 'react-i18next';
-// Validation using yup
-// const schema = yup.object().shape({
-//   name: yup.string().required(useTranslation().t('Name is required')),
-//   email: yup.string().email('Invalid email').required('Email is required'),
-//   mobile: yup.string().required('Mobile number is required'),
-//   hearAbout: yup.string().required('This field are required'),
-//   projectDetails: yup.string().required('Project details are required')
-// });
+import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
   const theme = useTheme();
@@ -89,9 +82,9 @@ const Contact: React.FC = () => {
               themeMode={theme.palette.mode}
             />
             {errors.name && (
-              <Contact__Typography color="error" variant="body2">
+              <Error color="error" variant="body2">
                 {errors.name.message}
-              </Contact__Typography>)}
+              </Error>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
@@ -106,9 +99,9 @@ const Contact: React.FC = () => {
               themeMode={theme.palette.mode}
             />
             {errors.email && (
-              <Contact__Typography color="error" variant="body2">
+              <Error color="error" variant="body2">
                 {errors.email.message}
-              </Contact__Typography>)}
+              </Error>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
@@ -123,9 +116,9 @@ const Contact: React.FC = () => {
               themeMode={theme.palette.mode}
             />
             {errors.mobile && (
-              <Contact__Typography color="error" variant="body2">
+              <Error color="error" variant="body2">
                 {errors.mobile.message}
-              </Contact__Typography>)}
+              </Error>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
@@ -140,9 +133,9 @@ const Contact: React.FC = () => {
               themeMode={theme.palette.mode}
             />
             {errors.hearAbout && (
-              <Contact__Typography color="error" variant="body2">
+              <Error color="error" variant="body2">
                 {errors.hearAbout.message}
-              </Contact__Typography>)}
+              </Error>)}
           </ContactBox>
         </Grid>
         <Grid item xs={12}>
@@ -153,9 +146,9 @@ const Contact: React.FC = () => {
               themeMode={theme.palette.mode}
             />
             {errors.projectDetails && (
-              <Contact__Typography color="error" variant="body2">
+              <Error color="error" variant="body2">
                 {errors.projectDetails.message}
-              </Contact__Typography>
+              </Error>
             )}
           </ContactBox>
         </Grid>
@@ -165,8 +158,15 @@ const Contact: React.FC = () => {
               {t("Submit")}
             </Contact__SubmitButton>
           </ContactBox>
+          <ContactBox>
+            <Link to="/contact/DisplayData">
+              <Contact__SubmitButton>
+                See your answer
+              </Contact__SubmitButton>
+            </Link>
+          </ContactBox>
         </Grid>
-      </ContactGrid>
+            </ContactGrid>
     </>
   );
 };

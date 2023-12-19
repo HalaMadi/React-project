@@ -13,26 +13,31 @@ import { useThemeContext } from './theme/ThemeContextProvider';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import NightModeToggle from './components/themeButton/themeButton';
 import LanguageSelector from './components/language/langButton';
+import DataTable from './pages/contact/DataTable';
+import useFirestoreData from './config/useFirestoreData';
 
 const App: React.FC = () => {
   const { theme } = useThemeContext();
+  const { data: fetchedData } = useFirestoreData(); 
+
   return (
     <>
-    <ThemeProvider theme={theme}>
-    <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
         <LanguageSelector/>
-      <NightModeToggle />
-      <Menu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/tansto" element={<Tansto />} />
-        <Route path="/projects/website" element={<Website />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </ThemeProvider>
+        <NightModeToggle />
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/tansto" element={<Tansto />} />
+          <Route path="/projects/website" element={<Website />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/DisplayData" element={<DataTable data={fetchedData} />} />
+        </Routes>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 };

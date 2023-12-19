@@ -15,9 +15,7 @@ export const StyledLink = styled(Link)`
     &.Mui-selected:hover {
       color: #000;
     }
-    &:hover {
-      text-decoration: underline;
-    }
+    
   }
 `;
 export const ProjectIndicator = styled.span`

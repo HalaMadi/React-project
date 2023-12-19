@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const theme = useTheme();
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
-  const isRtl = currentLanguage === 'ar'; 
+  const isRtl = currentLanguage === 'ar';
   return (
     <>
       <StyledHomeContainer>
@@ -20,8 +20,10 @@ const Home: React.FC = () => {
         </StyledContainer>
         <Expertise />
       </StyledHomeContainer>
-      <BoxDesign dir={isRtl ? 'rtl' : 'ltr'} themeMode={theme.palette.mode}
-        sx={{ textAlign: 'center', mt: 5 }}>
+      <BoxDesign
+        dir={isRtl ? 'rtl' : 'ltr'}
+        themeMode={theme.palette.mode}
+        >
         {t("digital_expertise")}
       </BoxDesign>
       <StyledHomeContainer>
