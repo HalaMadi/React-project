@@ -34,7 +34,7 @@ const App: React.FC = () => {
           <Route path="/projects/website" element={<Website />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/contact/DisplayData" element={<DataTable data={fetchedData} />} />
+          {/* <Route path="/contact/DisplayData" element={<DataTable data={fetchedData} />} /> */}
         </Routes>
         <Footer />
       </ThemeProvider>
