@@ -13,13 +13,10 @@ import { useThemeContext } from './theme/ThemeContextProvider';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import NightModeToggle from './components/themeButton/themeButton';
 import LanguageSelector from './components/language/langButton';
-import DataTable from './pages/contact/DataTable';
-import useFirestoreData from './config/useFirestoreData';
+
 
 const App: React.FC = () => {
   const { theme } = useThemeContext();
-  const { data: fetchedData } = useFirestoreData(); 
-
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -34,7 +31,6 @@ const App: React.FC = () => {
           <Route path="/projects/website" element={<Website />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/contact/DisplayData" element={<DataTable data={fetchedData} />} /> */}
         </Routes>
         <Footer />
       </ThemeProvider>
